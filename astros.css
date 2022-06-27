@@ -1,0 +1,171 @@
+:root
+{
+    --cinza-transparente: rgba( 0, 0, 0, 0.5 );
+}
+
+html, body
+{
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+    height: 100%;
+}
+
+body
+{
+    background-color: black;
+    background-image: url( "./assets/fundo-2.png" );
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+/* Menu principal da página */
+#header
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 1rem 2rem;
+    background-color: rgba(94, 91, 91, 0.384);
+}
+
+#header-image
+{
+    width: 200px;
+    cursor: pointer;
+}
+
+#header-content
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-button
+{
+    text-decoration: none;
+    font-size: 1.25rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-align: center;
+    color: white;
+    padding: 4px 16px;
+    transition: all ease 0.25s;
+}
+
+.header-button:hover
+{
+    transform: scale( 110% );
+    color: #CCCCCC;
+}
+
+/* Configurações dos astros */
+#earth
+{
+    background-image: url( "./assets/earth-map.jpg" );
+    width: 300px;
+    height: 300px;
+}
+
+#moon
+{
+    background-image: url( "./assets/moon-map.jpg" );
+    width: 150px;
+    height: 150px;
+}
+
+#mars
+{
+    background-image: url( "./assets/mars-map.jpg" );
+    width: 220px;
+    height: 220px;
+}
+
+.astro
+{
+    background-image: url( "./assets/earth-map.jpg" );
+    border-radius: 50%;
+    box-shadow: -20px -20px 50px 6px black inset, 0px 0px 20px 6px inset rgba( 0, 0, 0, 0.5 );
+    background-size: cover;
+    animation: girar 30s linear alternate infinite;
+}
+
+/* Carrossel que contém os astros */
+.carousel-container
+{
+    position: relative;
+    max-width: 640px;
+}
+
+.carousel-body
+{
+    box-sizing: border-box;
+    overflow-x: auto;
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+}
+
+/* This is from w3schools */
+/* https://www.w3schools.com/howto/howto_css_hide_scrollbars.asp */
+/* Hide scrollbar for Chrome, Safari and Opera */
+.carousel-body::-webkit-scrollbar
+{
+    display: none;
+}
+
+.carousel-content
+{
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 15px;
+}
+
+.carousel-arrow
+{
+    position: absolute;
+    cursor: pointer;
+    border: none;
+    color: white;
+    top: 0px;
+    bottom: 0px;
+}
+
+.carousel-arrow.arrow-left
+{
+    background: linear-gradient( to left, transparent 0%, black 100% );
+    left: 0px;
+}
+
+.carousel-arrow.arrow-right
+{
+    right: 0px;
+    background: linear-gradient( to right, transparent 0%, black 100% );
+}
+
+.carousel-item
+{
+    opacity: 0.5;
+    transition: all ease-in-out 0.5s;
+}
+
+.carousel-current
+{
+    opacity: 1;
+}
+
+/* Parte principal da página */
+main
+{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+/* Animações */
+@keyframes girar
+{
+    100% { background-position: 100%; }
+}

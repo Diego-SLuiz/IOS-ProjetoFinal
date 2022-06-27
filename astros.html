@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+
+<head>
+    <!-- Configurações da página -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bellatrix - Astros</title>
+
+    <!-- Importando estilização -->
+    <link rel="stylesheet" href="astros.css">
+</head>
+
+<body>
+    <!-- Header principal da página que contém a navegação -->
+    <header id="header">
+        <img src="./assets/titulo-desktop.png" alt="Logo Bellatrix" id="header-image">
+
+        <div id="header-content">
+            <a href="#" class="header-button">Home</a>
+            <a href="#" class="header-button">Astros</a>
+            <a href="#" class="header-button">Tour</a>
+            <a href="#" class="header-button">Sobre</a>
+        </div>
+    </header>
+
+    <main>
+        <div class="astro" id="earth"></div>
+        <div class="astro" id="moon"></div>
+        <div class="astro" id="mars"></div>
+    </main>
+
+    <!-- Carrossel contendo os astros -->
+    <div class="carousel-container">
+        <div class="carousel-body">
+            <div class="carousel-content">
+                <img src="https://source.unsplash.com/random/250x250" class="carousel-item carousel-current">
+                <img src="https://source.unsplash.com/random/250x250" class="carousel-item">
+                <img src="https://source.unsplash.com/random/250x250" class="carousel-item">
+                <img src="https://source.unsplash.com/random/250x250" class="carousel-item">
+                <img src="https://source.unsplash.com/random/250x250" class="carousel-item">
+                <button class="carousel-arrow arrow-left"><-</button>
+                <button class="carousel-arrow arrow-right">-></button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Importando scripts -->
+    <script src="./astros.js"></script>
+</body>
+
+</html>
