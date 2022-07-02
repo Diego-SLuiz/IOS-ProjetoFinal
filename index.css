@@ -21,20 +21,13 @@ body
 
 #header-container
 {
-    position: relative;
     padding: 2rem;
     padding-right: 0;
-    display: flex;
-    align-items: center;
 }
 
 #navegacao-menu
 {
     position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex: 1 0 50%;
     gap: 1rem;
     background-color: rgba(43, 30, 43, 0.4);
     backdrop-filter: blur(4px);
@@ -60,6 +53,11 @@ body
     top: 50%;
     transform: translate( 0, -1px );
     background-color: rgba(255, 255, 255, 0.3);
+}
+
+#conteudo-menu
+{
+    flex-wrap: nowrap;
 }
 
 .menu-item

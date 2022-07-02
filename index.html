@@ -11,21 +11,52 @@
 
     <!-- Estilização principal da página -->
     <link rel="stylesheet" href="index.css">
+
+    <!-- Estilização boostrap -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+        crossorigin="anonymous"
+    >
+
 </head>
 
 <body>
     <!-- Header principal da págna -->
-    <header id="header-container">
+    <header id="header-container" class="d-sm-flex align-items-center">
         <img src="./assets/images/titulo-desktop.png" alt="Imagem Título" id="imagem-titulo">
         <hr id="menu-linha">
-        <nav id="navegacao-menu">
-            <a href="" class="menu-item"><span class="menu-numero">00</span>Início</a>
-            <a href="" class="menu-item"><span class="menu-numero">01</span>Curiosidades</a>
-            <a href="" class="menu-item"><span class="menu-numero">02</span>Destinos</a>
-            <a href="" class="menu-item"><span class="menu-numero">03</span>Sobre</a>
-            <hr id="menu-linha-interna">
+        <nav id="navegacao-menu" class="navbar navbar-expand-lg">
+
+            <div id="conteudo-menu" class="collapse navbar-collapse d-lg-flex flex-col-lg align-items-center">
+                <a href="" class="menu-item"><span class="menu-numero">00</span>Início</a>
+                <a href="" class="menu-item"><span class="menu-numero">01</span>Curiosidades</a>
+                <a href="" class="menu-item"><span class="menu-numero">02</span>Destinos</a>
+                <a href="" class="menu-item"><span class="menu-numero">03</span>Sobre</a>
+                <hr id="menu-linha-interna">
+            </div>
+
+            <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#conteudo-menu"
+                aria-controls="navbarSupportedContent"
+                aria-expanded="false"
+                aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+              </button>
         </nav>
+
     </header>
+
+    <!-- Scripts bootstrap -->
+    <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+        crossorigin="anonymous">
+    </script>
 </body>
 
 </html>
