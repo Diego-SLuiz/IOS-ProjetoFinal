@@ -1,0 +1,82 @@
+html, body
+{
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+}
+
+body
+{
+    background-color: #06000c;
+    background-image: url(./assets/images/fundo-planos.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    color: aliceblue;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+#header-container
+{
+    position: relative;
+    padding: 2rem;
+    padding-right: 0;
+    display: flex;
+    align-items: center;
+}
+
+#navegacao-menu
+{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1 0 50%;
+    gap: 1rem;
+    background-color: rgba(43, 30, 43, 0.4);
+    backdrop-filter: blur(4px);
+    height: 75px;
+}
+
+#menu-linha
+{
+    width: 80%;
+    height: 1px;
+    border: 0;
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+#menu-linha-interna
+{
+    position: absolute;
+    margin: 0;
+    border: 0;
+    height: 1px;
+    width: 32px;
+    left: 0;
+    top: 50%;
+    transform: translate( 0, -1px );
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.menu-item
+{
+    text-decoration: none;
+    color: aliceblue;
+    margin: 1rem;
+}
+
+.menu-numero
+{
+    font-weight: 800;
+    margin: 0 5px;
+}
+
+#imagem-titulo
+{
+    max-width: 351px;
+    max-height: 75px;
+}
