@@ -10,7 +10,6 @@ html, body
 body
 {
     background-color: #06000c;
-    background-image: url(./assets/images/fundo-planos.jpg);
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center;
@@ -38,7 +37,7 @@ body
 
 #menu-navegacao
 {
-    background-color: rgba(43, 30, 43, 0.4);
+    background-color: rgba(43, 30, 43, 0.8);
     backdrop-filter: blur(4px);
 }
 
