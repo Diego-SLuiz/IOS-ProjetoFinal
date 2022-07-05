@@ -37,7 +37,7 @@ body
 
 #menu-navegacao
 {
-    background-color: rgba(43, 30, 43, 0.8);
+    background-color: rgba(43, 30, 43, 0.7);
     backdrop-filter: blur(4px);
 }
 
@@ -73,6 +73,25 @@ body
 {
     font-weight: 800;
     margin: 0 5px;
+}
+
+@keyframes btnHover {
+    from {
+        color: aliceblue;
+    }
+    to {
+        color: rgba(0, 238, 255, 0.8);
+    }
+}
+
+.hover {
+    transition-duration:.3s;
+}
+
+.hover:hover {
+    animation: btnHover .3s;
+    transform: scale(1.02);
+    color: rgba(0, 238, 255, 0.8);
 }
 
 @media ( min-width: 992px )
