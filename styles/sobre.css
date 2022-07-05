@@ -89,8 +89,11 @@ body {
   
 }
 
-.carousel-inner{
+.carousel-inner p {
   color:black;
+  font-size: 30px;
+  text-align: center;
+
 }
 
 /* #teste{
