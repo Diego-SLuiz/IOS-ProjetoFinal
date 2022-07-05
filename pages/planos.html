@@ -1,47 +1,96 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-    
     <head>
         <title>Bellatrix - Destinos</title>
         <meta charset="UTF-8">
-        <link rel="icon" href="../../assets/icone.png" type="image/x-icon">
+        <link rel="icon" href="../assets/images/icone.png" type="image/x-icon">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <!-- Estilização padrão da página -->
+        <link rel="stylesheet" href="../index.css">
+        
+        <!-- Estilização de destinos -->
+        <link rel="stylesheet" href="../styles/planos.css" type="text/css">
+
+        <!-- Estilização boostrap -->
         <link
             href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
             rel="stylesheet"
             integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
             crossorigin="anonymous"
         >
-        <link rel="stylesheet" href="../styles/planos.css" type="text/css">
+
+        <!-- Estilização ícones bootstrap -->
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css"
+        >
     </head>
-    
+
     <body>
-        <div class="container">
-            <header class="d-flex p-2 headerContainer">
-                <div class="iconContainer">
-                    <a href="#">
-                        <img class="icon" src="../assets/images/titulo-desktop.png">
-                    </a>
+        <div>
+            <div>
+                <i class="bi bi-arrow-up-left-square" onclick="openForm()" id="openForm"></i>
+                <div class="" id="formContainer" onblur="closeForm()">
+                    <div id="conteudo">
+                        <i class="bi bi-x-lg" onclick="closeForm()" id="closeForm"></i>
+                        <div id="info">
+                            <img src="../assets/images/terra.jpg" style="max-width: 30vw;">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum nam asperiores rerum sunt! Praesentium labore inventore recusandae, tempore aspernatur pariatur nostrum necessitatibus itaque illum sapiente dicta eveniet officia tempora. Excepturi.</p>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum nam asperiores rerum sunt! Praesentium labore inventore recusandae, tempore aspernatur pariatur nostrum necessitatibus itaque illum sapiente dicta eveniet officia tempora. Excepturi.</p>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum nam asperiores rerum sunt! Praesentium labore inventore recusandae, tempore aspernatur pariatur nostrum necessitatibus itaque illum sapiente dicta eveniet officia tempora. Excepturi.</p>
+                        </div>
+                        
+                        <form id="form">
+                            <div id="nomeCompleto">
+                                <input
+                                    id="nome"
+                                    type="text"
+                                    placeholder="Nome">
+                                </input>
+                            
+                                <input
+                                    id="sobreNome"
+                                    type="text"
+                                    placeholder="Sobre nome">
+                                </input>
+                            </div>
+                            
+                            <input
+                                class="tamanhoLimite"
+                                id="e-mail"
+                                type="text"
+                                placeholder="E-mail">
+                            </input>
+                            
+                            <input
+                                class="tamanhoLimite"
+                                id="aniversario"
+                                type="date"
+                                placeholder="Data de aniversário">
+                            </input>
+                            
+                            <button class="tamanhoLimite" id="enviar" onclick="formDone">
+                                Enviar
+                            </button>
+                        </form>
+                    </div>
                 </div>
-                <hr>
-                <div class="d-flex p-2 flex-row justify-content-center buttonsContainer">
-                    <div class="headerBtn">
-                        <a href="#"><span>00</span> Início</a>
-                    </div>
-                    <div class="headerBtn">
-                        <a href="#"><span>01</span> Curiosidades</a>
-                    </div>
-                    <div class="currentPage headerBtn">
-                        <a href="#"><span>02</span> Destinos</a>
-                    </div>
-                    <div class="headerBtn">
-                        <a href="#"><span>03</span> Sobre nós</a>
-                    </div>
-                </div>
-            </header>
+            </div>
         </div>
+
+        <!-- Script de destinos -->
+        <script src="../scripts/planos.js"></script>
         
+        <!-- Scripts bootstrap -->
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+            crossorigin="anonymous">
+        </script>
+        
+        <!-- Sscript do header -->
+        <script src="../scripts/header.js"></script>
     </body>
-    
 </html>
