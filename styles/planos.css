@@ -53,7 +53,7 @@ body {
 }
 
 #conteudo::-webkit-scrollbar-thumb:hover {
-    background-color: rgb(92, 92, 92);
+    background-color: rgb(88, 88, 88);
 }
 
 img {
@@ -64,8 +64,10 @@ img {
 
 #info {
     background-color: rgba(0, 0, 0, .6);
-    margin: 5vh 25%;
+    margin: 4vh 25%;
     padding: 2vh 4vw;
+    border-radius: 10px;
+    min-width: 265px;
     color: aliceblue;
     text-align: center;
 }
@@ -77,7 +79,9 @@ img {
     min-width: 40vw;
     justify-content: center;
     margin: 0 auto;
+    margin-bottom: 4vh;
 }
+
 .tamanhoLimite {
     max-width: 45vw;
 }
