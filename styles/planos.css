@@ -1,10 +1,6 @@
-html, body {
-    margin: 0;
-    padding: 0;
-}
-
 body {
-    background-image: url(../assets/images/fundo-astros.jpg);
+    background-image: url(../assets/images/fundo-planos.jpg);
+    color: aliceblue !important;
 }
 
 /* modal */
@@ -27,20 +23,22 @@ body {
 
 #conteudo {
     position: relative;
-    background-image: url(../assets/images/fundo-planos.jpg);
+    background-image: url(../assets/images/formulario-planos.jpg);
     background-position: center;
     background-size: cover;
     border: 1px solid black;
     border-radius: 10px;
     box-shadow: 0 0 10px black;
     min-width: 270px;
-    min-height: 600px;
-    width: 60vw;
+    min-height: 90vh;
+    width: 70vw;
     height: 90vh;
     overflow-y: auto;
+    overflow-x: hidden;
     outline: none;
 }
 
+/* barra de rolamento do modal */
 #conteudo::-webkit-scrollbar {
     width: 14px;
 }
@@ -55,11 +53,14 @@ body {
 #conteudo::-webkit-scrollbar-thumb:hover {
     background-color: rgb(88, 88, 88);
 }
+/* fim da barra de rolamento */
 
 img {
     object-fit: contain;
     width: 100%;
     height: auto;
+    margin-bottom: 4vh;
+    border-radius: 10px;
 }
 
 #info {
@@ -83,7 +84,11 @@ img {
 }
 
 .tamanhoLimite {
-    max-width: 45vw;
+    max-width: 100%;
+}
+
+.align {
+    display: flex;
 }
 
 #nomeCompleto {
@@ -91,17 +96,22 @@ img {
     flex-wrap: nowrap;
 }
 
+.textoForm {
+    flex: 1 0 31.2%;
+}
+
 #nome, #sobreNome {
-    flex: 1 0 50%;
+    flex: 1 0 33%;
+}
+
+#e-mail, #data {
+    flex: 1 0 40%;
 }
 
 #closeForm {
-    position: absolute;
-    top: 0;
-    right: 0;
+    position: fixed;
     color: aliceblue;
-    margin-top: 1vh;
-    margin-right: 1vw;
+    margin: 1vh 1vw;
     cursor: pointer;
 }
 
@@ -122,7 +132,6 @@ img {
     from {
         opacity: 0;
     }
-    
     to {
         opacity: 1;
     }
@@ -134,5 +143,46 @@ img {
 
 #enviar {
     border: 1px solid black;
+    backdrop-filter: blur(4px);
+}
+
+/* responsividade do modal */
+@media ( max-width: 900px ) {
+    #conteudo {
+        width: 90vw;
+    }
+    
+    #info {
+        margin: 4vh 0 4vh 4%;
+        padding: 2vh 4vw;
+    }
+    
+    #nomeCompleto {
+        flex-direction: column;
+    }
+    
+    #form {
+        width: 70vw;
+        margin-left: 12%;
+    }
+    
+    .align {
+        flex-direction: column;
+    }
+    
+    #nome, #sobreNome, #e-mail, #data {
+        width: 70vw;
+        border-radius: 0;
+        transform: translateX(1px);
+    }
+    
+    #sobreNome, #e-mail, #data {
+        border-radius: 0 0 10px 10px !important;
+    }
+    
+    .textoForm {
+        border-radius: 10px 10px 0 0 !important;
+        width: 70vw !important;
+    }
 }
 /* fim modal */

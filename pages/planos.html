@@ -30,48 +30,82 @@
 
     <body>
         <div>
+            <!-- conteúdo principal -->
+            <div>
+                
+            </div>
+
+            <!-- modal -->
             <div>
                 <i class="bi bi-arrow-up-left-square" onclick="openForm()" id="openForm"></i>
                 <div class="" id="formContainer" onblur="closeForm()">
                     <div id="conteudo">
                         <i class="bi bi-x-lg" onclick="closeForm()" id="closeForm"></i>
                         <div id="info">
-                            <img src="../assets/images/terra.jpg" style="max-width: 30vw;">
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum nam asperiores rerum sunt! Praesentium labore inventore recusandae, tempore aspernatur pariatur nostrum necessitatibus itaque illum sapiente dicta eveniet officia tempora. Excepturi.</p>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum nam asperiores rerum sunt! Praesentium labore inventore recusandae, tempore aspernatur pariatur nostrum necessitatibus itaque illum sapiente dicta eveniet officia tempora. Excepturi.</p>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum nam asperiores rerum sunt! Praesentium labore inventore recusandae, tempore aspernatur pariatur nostrum necessitatibus itaque illum sapiente dicta eveniet officia tempora. Excepturi.</p>
+                            <div id="planeta"></div>
+                            <div id="planetaInfo"></div>
                         </div>
                         
                         <form id="form">
-                            <div id="nomeCompleto">
+                            <div class="input-group" id="nomeCompleto">
+                                <span class="input-group-text textoForm">Nome e Sobrenome</span>
                                 <input
+                                    class="form-control"
                                     id="nome"
                                     type="text"
-                                    placeholder="Nome">
+                                    placeholder="Nome"
+                                    required>
                                 </input>
                             
                                 <input
+                                    class="form-control"
                                     id="sobreNome"
                                     type="text"
-                                    placeholder="Sobre nome">
+                                    placeholder="Sobre nome"
+                                    required>
                                 </input>
                             </div>
                             
-                            <input
-                                class="tamanhoLimite"
-                                id="e-mail"
-                                type="text"
-                                placeholder="E-mail">
-                            </input>
+                            <div class="align input-group mt-1">
+                                <span class="input-group-text form-control textoForm">@ E-mail</span>
+                                <input
+                                    class="form-control tamanhoLimite"
+                                    id="e-mail"
+                                    type="text"
+                                    placeholder="E-mail"
+                                    required>
+                                </input>
+                            </div>
                             
-                            <input
-                                class="tamanhoLimite"
-                                id="aniversario"
-                                type="date"
-                                placeholder="Data de aniversário">
-                            </input>
+                            <div class="align input-group mt-1">
+                                <span class="input-group-text form-control textoForm">Data de nascimento</span>
+                                <input
+                                    class="form-control tamanhoLimite"
+                                    id="data"
+                                    type="date"
+                                    required>
+                                </input>
+                            </div>
                             
-                            <button class="tamanhoLimite" id="enviar" onclick="formDone">
+                            <div class="checkBox form-check mt-1">
+                                <input class="form-check-input" required type="checkbox" value="">
+                                <label class="form-check-label" for="flexCheckDefault">
+                                  Aceito todos os termos de serviço
+                                </label>
+                            </div>
+                            
+                            <div class="checkBox form-check mt-1">
+                                <input class="form-check-input" type="checkbox" value="">
+                                <label class="form-check-label" for="flexCheckDefault">
+                                  Desejo receber novidades
+                                </label>
+                            </div>
+                            
+                            <button
+                                class="tamanhoLimite mt-2 btn btn-outline-light"
+                                id="enviar"
+                                onclick="formDone"
+                            >
                                 Enviar
                             </button>
                         </form>
@@ -90,7 +124,7 @@
             crossorigin="anonymous">
         </script>
         
-        <!-- Sscript padrão da página -->
+        <!-- Script padrão da página -->
         <script src="../scripts/header.js"></script>
     </body>
 </html>
