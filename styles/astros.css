@@ -1,7 +1,7 @@
 body
 {
     background-color: black;
-    background-image: url( "../assets/images/funco-astros.jpg" );
+    background-image: url( "../assets/images/fundo-inicio.jpg" );
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -30,6 +30,7 @@ body
 
 .astro
 {
+    margin: auto;
     background-image: url( "./assets/earth-map.jpg" );
     border-radius: 50%;
     box-shadow: -20px -20px 50px 6px black inset, 0px 0px 20px 6px inset rgba( 0, 0, 0, 0.5 );
@@ -39,14 +40,72 @@ body
 
 .astro-container
 {
-    margin: auto!important;
+    width: 400px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#astros-slider
+{
+    width: 400px!important;
+    height: 400px!important;
+
+    /* box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
+    background: rgba(0, 0, 0, 0);
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    border-left: 1px solid rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(1px); */
+
+    border-radius: 10px;
+    backdrop-filter: blur(3px);
+    background-color: rgba(255, 255, 255, 0.2);
 }
 
 main
 {
     display: flex;
     justify-content: space-around;
-    align-items: center;
+    gap: 2rem;
+    padding: 0 2rem;
+}
+
+#astros-informacoes
+{
+    background-color: rgba(255, 255, 255, 0.2);
+    color: black;
+    border-radius: 10px;
+    padding: 2rem;
+    backdrop-filter: blur(3px);
+
+    /* box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0);
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    border-left: 1px solid rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(2px); */
+}
+
+#astro-nome
+{
+    text-align: center;
+}
+
+.astro-atributo
+{
+    font-size: 1.25em;
+    font-weight: 600;
+}
+
+.card-conteudo {
+    box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0);
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    border-left: 1px solid rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(2px);
 }
 
 @keyframes girar
