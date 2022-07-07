@@ -28,6 +28,7 @@ body
 {
     padding: 2rem;
     gap: 2rem;
+    z-index: 2000 !important;
 }
 
 #menu-imagem-desktop
