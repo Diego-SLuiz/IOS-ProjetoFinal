@@ -1,5 +1,7 @@
 body {
-    background-image: url(../assets/images/fundo-planos.jpg);
+    background-color: black !important;
+    background-image: url(../assets/images/test-bg.jpg);
+    overflow: hidden !important;
     color: aliceblue !important;
 }
 
@@ -24,6 +26,8 @@ body {
 #conteudo {
     position: relative;
     background-image: url(../assets/images/formulario-planos.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     background-position: center;
     background-size: cover;
     border: 1px solid black;
@@ -186,3 +190,68 @@ img {
     }
 }
 /* fim modal */
+
+/* planetas */
+.planet {
+    position: absolute;
+    border-radius: 50%;
+}
+
+#sun {
+    background-color: orange;
+    width: 100px;
+    height: 100px;
+}
+
+#mercury {
+    background-color: gray;
+    width: 10px;
+    height: 10px;
+}
+
+#venus {
+    background-color: chocolate;
+    width: 20px;
+    height: 20px;
+}
+
+#earth {
+    background-color: royalblue;
+    width: 25px;
+    height: 25px;
+}
+
+#mars {
+    background-color: brown;
+    width: 22px;
+    height: 22px;
+}
+/* 
+#asteroid {
+    
+} */
+
+#jupiter {
+    background-color: rosybrown;
+    width: 70px;
+    height: 70px;
+}
+
+#saturn {
+    background-color: tan;
+    width: 50px;
+    height: 50px;
+}
+
+#uranus {
+    background-color: aqua;
+    width: 40px;
+    height: 40px;
+}
+
+#neptune {
+    background-color: blue;
+    width: 50px;
+    height: 50px;
+}
+/* fim planetas */
