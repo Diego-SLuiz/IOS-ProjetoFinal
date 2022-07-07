@@ -65,7 +65,7 @@ img {
 
 #info {
     background-color: rgba(0, 0, 0, .6);
-    margin: 4vh 25%;
+    margin: 4vh 20%;
     padding: 2vh 4vw;
     border-radius: 10px;
     min-width: 265px;
@@ -104,7 +104,7 @@ img {
     flex: 1 0 33%;
 }
 
-#e-mail, #data {
+#usuario, #e-mail, #senha, #data {
     flex: 1 0 40%;
 }
 
@@ -170,13 +170,13 @@ img {
         flex-direction: column;
     }
     
-    #nome, #sobreNome, #e-mail, #data {
+    #nome, #sobreNome, #usuario, #e-mail, #senha, #data {
         width: 70vw;
         border-radius: 0;
         transform: translateX(1px);
     }
     
-    #sobreNome, #e-mail, #data {
+    #sobreNome, #usuario, #e-mail, #senha, #data {
         border-radius: 0 0 10px 10px !important;
     }
     
