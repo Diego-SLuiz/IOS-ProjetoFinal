@@ -31,21 +31,39 @@ main{
   color: white;
   backdrop-filter: blur(5px);
   
+ 
+  
+}
+.sobre{
+  transition: all 2.9s;
+  border: 10px solid #eeeeee0a;
+}
+.sobre:hover{
+  border: 10px solid #2b1f782f;
+  border-radius: 50%;
+  -webkit-filter: drop-shadow(15px 7px 1px rgba(0,0,0,.5));
+  filter: drop-shadow(15px 7px 1px rgba(0,0,0,.5));
+  -webkit-transform: rotateZ(-360deg) scale(1.5);
+  transform: rotateZ(-360deg) scale(1.5);
 }
 
 .sobre p {
   color: rgb(197, 229, 235);
-  font-size: 24px;
+  font-size: 20px;
   text-align: center;
   padding-bottom: 5px;
   padding-left: 5px;
+  font-family: 'Jost', sans-serif;
 
 }
 
 .sobre h5 {
   padding: 2px;
-  font-family: Arial, Helvetica, sans-serif;
-  color: rgba(124, 152, 228, 0.877);
+  font-family: Von-Everec;
+  color: rgba(255, 255, 255, 0.992);
   font-size: 48px;
+  transition: all 0.5s;
+  cursor: pointer;
 
 }
+
