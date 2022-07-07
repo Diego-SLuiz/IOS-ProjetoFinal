@@ -1,5 +1,5 @@
 body {
-    background-image: url(../assets/images/fundo-inicio.jpg);
+    background-image: url(../assets/images/fundo-planos.jpg);
 }
 
 .circulo {
@@ -8,79 +8,44 @@ body {
     background-color: rgba(255, 255, 255, 0.63);
     border: 2px solid white;
     border-radius: 50%;
-    position: absolute;
-    top: 56%;
-    left: 82%;
-    transform: translate(-50%, -50%);
-}
-
-.centralizado{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}  
-
-.btn1 {
     display: flex;
-    position: relative;
-    width: 150px;
-    height: 55px;
-    border-radius: 7px;
-    overflow: hidden;
-    align-items: center;
     justify-content: center;
-    font-weight: bold;
-    margin-top: 8%;
+    align-items: center;
+    /* position: absolute;
+    top: 56%;
+    left: 82%; */
+    /* transform: translate(-50%, -50%); */
 }
 
-.btn1::before {
-    content: "";
-    position: absolute;
-    width: 200px;
-    height: 200px;
-    background: conic-gradient(#121212, #595959);
-    animation: efeito 1.3s ease infinite;
-    transition: 1s ease;
-}
+.sobre
+{
+    margin-top: 20%;
+    transform: translate( 0, -50% );
 
-@keyframes efeito {
-    100%{
-        transform: rotate(360deg);
-    }
-}
+    padding: 0 3rem;
 
-.container:hover .btn1::before{
-    background: #595959;
-}
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 
-#btn2{
-    position: absolute;
-    z-index: 1;
-    display: block;
-    width: 147px;
-    height: 52px;
-    background: #121212;
-    text-align: center;
-    line-height: 52px;
-    border-radius: 6px;
-    text-decoration: none;
-    color: #fff;
-    letter-spacing: 1px;
-    font-family: 'Courier New', Courier, monospace;
-    font-size: 1.3rem;
-}
-
- .sobre{
     color: white;
     text-align: center;
-    margin-top: 10%;
-    padding-left: 25%;
-    padding-right: 25%;
+    /* margin-top: 10%; */
+    /* padding-left: 25%; */
+    /* padding-right: 25%; */
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-size: 1.5rem;
     /* background-color: #1212125e;
     border-radius: 8%; */
+}
+
+#circulo-texto
+{
+    font-size: 2rem;
+    font-weight: 600;
+    color: black;
+    text-align: center;
+    text-decoration: none;
 }
 
 #destaque {
@@ -91,4 +56,9 @@ body {
     align-items: center;
     font-weight: bold;
     font-size: 5rem;
+}
+
+#texto-principal
+{
+    max-width: 50%;
 }
