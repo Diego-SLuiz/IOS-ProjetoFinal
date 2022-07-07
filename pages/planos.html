@@ -32,12 +32,11 @@
         <div>
             <!-- conteúdo principal -->
             <div>
-                
+                <i class="bi bi-arrow-up-left-square" onclick="openForm()" id="openForm"></i>
             </div>
 
             <!-- modal -->
             <div>
-                <i class="bi bi-arrow-up-left-square" onclick="openForm()" id="openForm"></i>
                 <div class="" id="formContainer" onblur="closeForm()">
                     <div id="conteudo">
                         <i class="bi bi-x-lg" onclick="closeForm()" id="closeForm"></i>
@@ -47,6 +46,7 @@
                         </div>
                         
                         <form id="form">
+                            <p>Crie sua conta</p>
                             <div class="input-group" id="nomeCompleto">
                                 <span class="input-group-text textoForm">Nome e Sobrenome</span>
                                 <input
@@ -67,12 +67,34 @@
                             </div>
                             
                             <div class="align input-group mt-1">
+                                <span class="input-group-text form-control textoForm">Nome de usuário</span>
+                                <input
+                                    class="form-control tamanhoLimite"
+                                    id="usuario"
+                                    type="text"
+                                    placeholder="De 3 a 20 caractéres"
+                                    required>
+                                </input>
+                            </div>
+                            
+                            <div class="align input-group mt-1">
                                 <span class="input-group-text form-control textoForm">@ E-mail</span>
                                 <input
                                     class="form-control tamanhoLimite"
                                     id="e-mail"
                                     type="text"
-                                    placeholder="E-mail"
+                                    placeholder="placeholder@test.jl"
+                                    required>
+                                </input>
+                            </div>
+                            
+                            <div class="align input-group mt-1">
+                                <span class="input-group-text form-control textoForm">Senha</span>
+                                <input
+                                    class="form-control tamanhoLimite"
+                                    id="senha"
+                                    type="password"
+                                    placeholder="De 6 a 16 caractéres"
                                     required>
                                 </input>
                             </div>
@@ -88,14 +110,14 @@
                             </div>
                             
                             <div class="checkBox form-check mt-1">
-                                <input class="form-check-input" required type="checkbox" value="">
+                                <input class="form-check-input" id="termos" type="checkbox" value="">
                                 <label class="form-check-label" for="flexCheckDefault">
                                   Aceito todos os termos de serviço
                                 </label>
                             </div>
                             
                             <div class="checkBox form-check mt-1">
-                                <input class="form-check-input" type="checkbox" value="">
+                                <input class="form-check-input" id="novidades" type="checkbox" value="">
                                 <label class="form-check-label" for="flexCheckDefault">
                                   Desejo receber novidades
                                 </label>
