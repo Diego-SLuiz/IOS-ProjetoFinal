@@ -11,54 +11,138 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    /* position: absolute;
-    top: 56%;
-    left: 82%; */
-    /* transform: translate(-50%, -50%); */
+    margin-right: 5%;
 }
 
 .sobre
 {
     margin-top: 20%;
     transform: translate( 0, -50% );
-
     padding: 0 3rem;
-
     display: flex;
     justify-content: space-between;
     align-items: center;
-
     color: white;
     text-align: center;
-    /* margin-top: 10%; */
-    /* padding-left: 25%; */
-    /* padding-right: 25%; */
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-size: 1.5rem;
-    /* background-color: #1212125e;
-    border-radius: 8%; */
+    font-family: 'Jost', sans-serif;
+    font-size: 1.1rem;
 }
 
 #circulo-texto
 {
-    font-size: 2rem;
     font-weight: 600;
     color: black;
     text-align: center;
     text-decoration: none;
+    font-family: "Von-Everec", sans-serif!important;
+    font-size: 2.4rem!important;
+    padding: 0!important;
+    animation: treme 3.5s;
+    animation-iteration-count: infinite;
+    position: relative;
+    overflow: hidden;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: 3s;
+}
+
+@keyframes treme {
+    0% {margin-bottom: 0;}
+    25% {margin-bottom: 5px;}
+    50% {margin-bottom: 0;}
+    75% {margin-bottom: -5px;}
+    100% {margin-bottom: 0;}
 }
 
 #destaque {
-    color: rgb(20, 112, 218);
-    border: 0px;
-    background-color: #1212124d;
-    border-radius: 1rem;
+    color: rgb(255, 255, 255);
     align-items: center;
-    font-weight: bold;
-    font-size: 5rem;
+    font-family: "Von-Everec", sans-serif!important;
+    font-size: 5rem!important;
 }
 
 #texto-principal
 {
     max-width: 50%;
+    border: 0px solid black;
+    background-color: rgba(0, 0, 0, 0.205);
+    border-radius: 1.5%;
+    border-top: 1px solid rgba(255, 253, 253, 0.5);
+    border-left: 1px solid rgba(255, 255, 255, 0.5);
+    /* backdrop-filter: blur(2px);  */
+}
+
+.container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    flex-wrap: wrap;
+    z-index: 1;
+    letter-spacing: 1.5px;
+}
+
+.container .card {
+    position: relative;
+    width: 280px;
+    height: 400px;
+    margin: 30px;
+    box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.1);
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 1px solid rgba(255, 253, 253, 0.5);
+    border-left: 1px solid rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(2px);
+    border-radius: 50%;
+    width: 220px;
+    height: 220px;
+}
+
+.container .card:hover .content{
+    transform: translate(0px);
+    opacity: 1;
+}
+
+.container .card .content a{
+    font-weight: 600;
+    color: black;
+    text-align: center;
+    text-decoration: none;
+    font-family: "Von-Everec", sans-serif!important;
+    font-size: 2.7rem!important;
+    padding: 0!important;
+}
+
+#linha {
+    margin: auto 0;
+    margin-bottom: 10%;
+    width: 70%;
+    margin-left: 14%;
+}
+
+#texto-principal {
+    font-family: 'Jost', sans-serif;
+    font-size: 1.5rem;
+
+    /* position: relative;
+    width: 80%;
+    height: 400px;
+    margin: 30px;
+    box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.1);
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 1px solid rgba(255, 253, 253, 0.5);
+    border-left: 1px solid rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(2px); */
+  
 }
