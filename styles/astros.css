@@ -1,7 +1,7 @@
 body
 {
     background-color: black;
-    background-image: url( "../assets/images/fundo-inicio.jpg" );
+    background-image: url( "../assets/images/fundo-astros.JPEG" );
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -45,7 +45,7 @@ main
     border-radius: 50%;
     box-shadow: -20px -20px 50px 6px black inset, 0px 0px 20px 6px inset rgba( 0, 0, 0, 0.5 );
     background-size: cover;
-    animation: girar 30s linear alternate infinite;
+    animation: girar 60s linear alternate infinite;
 }
 
 .astro-container
@@ -64,30 +64,43 @@ main
     width: 400px!important;
     height: 400px!important;
     border-radius: 10px;
-    backdrop-filter: blur(3px);
-    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(1px);
+    background-color: rgba(0, 0, 0, 0.2);
 }
 
 /* Card principal que contém as informações */
 
 #astro-informacoes
 {
-    background-color: rgba(255, 255, 255, 0.2);
-    color: black;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
     border-radius: 10px;
     padding: 2rem;
-    backdrop-filter: blur(3px);
+    padding-top: 0;
+    backdrop-filter: blur(1px);
+    font-family: 'Jost', sans-serif;
+    /* font-family: 'Dosis', sans-serif; */
+    font-size: 1.1rem;
 }
 
 #astro-nome
 {
+    font-family: 'Jost', sans-serif;
     text-align: center;
+    font-family: Von-Everec;
+    font-size: 3rem;
 }
 
 .astro-atributo
 {
-    font-size: 1.25em;
     font-weight: 600;
+}
+
+.carousel-caption
+{
+    font-family: "Von-Everec", sans-serif!important;
+    font-size: 2rem!important;
+    padding: 0!important;
 }
 
 @keyframes girar
