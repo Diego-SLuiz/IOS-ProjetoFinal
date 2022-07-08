@@ -12,18 +12,24 @@
     <!-- Estilização principal da página -->
     <link rel="stylesheet" href="../index.css">
     <link rel="stylesheet" href="../styles/inicio.css">
+
+    <!-- Importando elemento ícone (favicon) -->
     <link rel="shortcut icon" href="../assets/images/favicon-32x32.png" type="image/x-icon">
+
+    <!-- Conectando página de login -->
     <link rel="stylesheet" href="login.html">
 
     <!-- Estilização boostrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous"
+    >
+
     <!-- Estilização ícones bootstrap -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
+
 </head>
 
 <body>
-
     <main class="sobre">
         <!--Página inicial texto-->
         <div id="texto-principal">
@@ -36,42 +42,27 @@
 
         <!--Botão de Explorar-->
         <div class="circulo">
-            <a onclick="" id="circulo-texto" href="login.html" target="_blank">Explorar...
+            <!-- <a onclick="" id="circulo-texto" href="login.html" target="_blank">Explorar... -->
                 <!-- <hr class="linha"> -->
+                <div class="btn1">
+                    <a id="btn2" href="#">Explorar</a>
+                </div>
             </a>
         </div>
 
-        <!-- <div class="container">
-            <div class="card">
-                <div class="content">
-                    <a  href="#">Explorar...</a>
-                    <hr id="linha">
-                </div>
-            </div>
-        </div> -->
-
     </main>
+
+     <!--Importando Script Header -->
+     <script src="../scripts/header.js"></script>
+
+     <!-- Importando footer -->
+     <script src="../scripts/footer.js"></script>
 
     <!-- Scripts bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous">
-        </script>
+    </script>
 
-    <!--Importando Script Header -->
-    <script src="../scripts/header.js"></script>
-
-    <!-- Importando footer -->
-    <script src="../scripts/footer.js"></script>
-
-    <script type="text/javascript" src="../scripts/card-animacao.js"></script>
-    <!-- <script>
-        VanillaTilt.init(document.querySelectorAll(".card"), {
-            max: 25,
-            speed: 400,
-            glare: true,
-            "max-glare": 1,
-        });
-    </script> -->
 </body>
 
 </html>
