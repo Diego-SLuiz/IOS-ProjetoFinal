@@ -56,63 +56,6 @@ function escreverInfo() {
 }
 // fim modal
 
-// cards
-const astros = document.getElementsByClassName('astro');
-var lasClickID;
-const floatingCard = `
-    <div class="card cardContainer">
-        <img class="card-img-top" src="../assets/images/terra.jpg" alt="Card image cap">
-        <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text" id="cardText"></p>
-            <a href="#" class="btn btn-light">Go somewhere</a>
-        </div>
-    </div>
-`;
-
-for (let i = 0; i < astros.length; i++) {
-    astros[i].addEventListener('click', card);
-}
-function card(e) {
-    e.target.innerHTML = floatingCard;
-    lasClickID = e.target.id;
-
-    switch (e.target.id) {
-        case 'sun':
-            document.getElementById('cardText').innerHTML = 'Esse é o Sol!';
-            break;
-        case 'mercury':
-            document.getElementById('cardText').innerHTML = 'Esse é Mercúrio!';
-            break;
-        case 'venus':
-            document.getElementById('cardText').innerHTML = 'Esse é Venus!';
-            break;
-        case 'earth':
-            document.getElementById('cardText').innerHTML = 'Essa é Terra!';
-            break;
-        case 'mars':
-            document.getElementById('cardText').innerHTML = 'Esse é Marte!';
-            break;
-        case 'asteroid':
-            document.getElementById('cardText').innerHTML =
-                'Esse é o cinturão de asteróides!';
-            break;
-        case 'jupiter':
-            document.getElementById('cardText').innerHTML = 'Esse é Jupiter!';
-            break;
-        case 'saturn':
-            document.getElementById('cardText').innerHTML = 'Esse é Saturno!';
-            break;
-        case 'uranus':
-            document.getElementById('cardText').innerHTML = 'Esse é Urano!';
-            break;
-        case 'neptune':
-            document.getElementById('cardText').innerHTML = 'Esse é Netuno!';
-            break;
-    }
-}
-// fim cards
-
 // astros
 const sun = document.querySelector('#sun');
 const mercury = {
@@ -206,3 +149,113 @@ function render() {
 }
 render();
 // fim astros
+
+// cards
+const astros = document.getElementsByClassName('astro');
+const todosAstos = [
+    'Sol',
+    'Mercurio',
+    'Venus',
+    'Terra',
+    'Marte',
+    'Asteroid',
+    'Jupiter',
+    'Saturno',
+    'Urano',
+    'Netuno',
+];
+var floatingCard;
+
+for (let i = 0; i < astros.length; i++) {
+    astros[i].addEventListener('click', card);
+}
+function card(e) {
+    resetCard();
+    function imgAstro(img) {
+        floatingCard = `
+            <div class="card interactiveCardContainer">
+                <img src="../assets/images/planetas/${todosAstos[img]}.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title" id="planetName"></h5>
+                    <p class="card-text"  id="cardText"></p>
+                </div>
+                <div class="card-body">
+                    <button type="button" class="btn btn-primary btn-sm">Saiba mais</button>
+                    <button type="button" class="btn btn-secondary btn-sm" disabled>Viagem Impossivel</button>
+                </div>
+            </div>
+        `;
+        e.target.innerHTML = floatingCard;
+    }
+
+    switch (e.target.id) {
+        case 'sun':
+            imgAstro(0);
+            document.getElementById('planetName').innerHTML = 'Sol';
+            document.getElementById('cardText').innerHTML =
+                'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia recusandae sunt incidunt beatae eum delectus, voluptate esse sequi sed officia vero corporis inventore blanditiis quod animi corrupti quibusdam. Omnis, ut?';
+            break;
+        case 'mercury':
+            imgAstro(1);
+            document.getElementById('planetName').innerHTML = 'Mercúrio';
+            document.getElementById('cardText').innerHTML =
+                'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia recusandae sunt incidunt beatae eum delectus, voluptate esse sequi sed officia vero corporis inventore blanditiis quod animi corrupti quibusdam. Omnis, ut?';
+            break;
+        case 'venus':
+            imgAstro(2);
+            document.getElementById('planetName').innerHTML = 'Venus';
+            document.getElementById('cardText').innerHTML =
+                'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia recusandae sunt incidunt beatae eum delectus, voluptate esse sequi sed officia vero corporis inventore blanditiis quod animi corrupti quibusdam. Omnis, ut?';
+            break;
+        case 'earth':
+            imgAstro(3);
+            document.getElementById('planetName').innerHTML = 'Terra';
+            document.getElementById('cardText').innerHTML =
+                'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia recusandae sunt incidunt beatae eum delectus, voluptate esse sequi sed officia vero corporis inventore blanditiis quod animi corrupti quibusdam. Omnis, ut?';
+            break;
+        case 'mars':
+            imgAstro(4);
+            document.getElementById('planetName').innerHTML = 'Marte';
+            document.getElementById('cardText').innerHTML =
+                'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia recusandae sunt incidunt beatae eum delectus, voluptate esse sequi sed officia vero corporis inventore blanditiis quod animi corrupti quibusdam. Omnis, ut?';
+            break;
+        case 'asteroid':
+            imgAstro(5);
+            document.getElementById('planetName').innerHTML =
+                'Cinturão de asteróides!';
+            document.getElementById('cardText').innerHTML =
+                'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia recusandae sunt incidunt beatae eum delectus, voluptate esse sequi sed officia vero corporis inventore blanditiis quod animi corrupti quibusdam. Omnis, ut?';
+            break;
+        case 'jupiter':
+            imgAstro(6);
+            document.getElementById('planetName').innerHTML = 'Jupiter';
+            document.getElementById('cardText').innerHTML =
+                'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia recusandae sunt incidunt beatae eum delectus, voluptate esse sequi sed officia vero corporis inventore blanditiis quod animi corrupti quibusdam. Omnis, ut?';
+            break;
+        case 'saturn':
+            imgAstro(7);
+            document.getElementById('planetName').innerHTML = 'Saturno';
+            document.getElementById('cardText').innerHTML =
+                'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia recusandae sunt incidunt beatae eum delectus, voluptate esse sequi sed officia vero corporis inventore blanditiis quod animi corrupti quibusdam. Omnis, ut?';
+            break;
+        case 'uranus':
+            imgAstro(8);
+            document.getElementById('planetName').innerHTML = 'Urano';
+            document.getElementById('cardText').innerHTML =
+                'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia recusandae sunt incidunt beatae eum delectus, voluptate esse sequi sed officia vero corporis inventore blanditiis quod animi corrupti quibusdam. Omnis, ut?';
+            break;
+        case 'neptune':
+            imgAstro(9);
+            document.getElementById('planetName').innerHTML = 'Netuno';
+            document.getElementById('cardText').innerHTML =
+                'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia recusandae sunt incidunt beatae eum delectus, voluptate esse sequi sed officia vero corporis inventore blanditiis quod animi corrupti quibusdam. Omnis, ut?';
+            break;
+    }
+}
+
+function resetCard() {
+    for (let i = 0; i < astros.length; i++) {
+        astros[i].innerHTML = '';
+    }
+}
+// fim cards

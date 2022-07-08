@@ -157,6 +157,7 @@ img {
 .planet {
     position: absolute;
     border-radius: 50%;
+    cursor: pointer;
 }
 
 #sun {
@@ -240,11 +241,9 @@ img {
 
 /* cards interativos */
 .interactiveCardContainer {
-    width: 18rem;
     position: relative;
-    background-color: rgba(0, 0, 0, .6) !important;
-    backdrop-filter: blur(2px);
     z-index: 2000 !important;
+    cursor: auto !important;
 }
 
 /* side cards */
