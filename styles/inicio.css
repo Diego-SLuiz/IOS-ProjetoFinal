@@ -2,17 +2,6 @@ body {
     background-image: url(../assets/images/fundo-planos.jpg);
 }
 
-.circulo {
-    width: 220px;
-    height: 220px;
-    background-color: rgba(255, 255, 255, 0.63);
-    border: 2px solid white;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-right: 5%;
-}
 
 .sobre
 {
@@ -28,6 +17,20 @@ body {
     font-size: 1.1rem;
 }
 
+.circulo {
+    width: 220px;
+    height: 220px;
+    background-color: rgba(255, 255, 255, 0.63);
+    border: 2px solid white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 5%;
+    animation: treme 3.5s;
+    animation-iteration-count: infinite;
+}
+
 #circulo-texto
 {
     font-weight: 600;
@@ -37,8 +40,6 @@ body {
     font-family: "Von-Everec", sans-serif!important;
     font-size: 2.4rem!important;
     padding: 0!important;
-    animation: treme 3.5s;
-    animation-iteration-count: infinite;
     position: relative;
     overflow: hidden;
     letter-spacing: 2px;
@@ -56,7 +57,7 @@ body {
 }
 
 #destaque {
-    color: rgb(255, 255, 255);
+    color: rgb(37, 192, 253);
     align-items: center;
     font-family: "Von-Everec", sans-serif!important;
     font-size: 5rem!important;
@@ -66,14 +67,25 @@ body {
 {
     max-width: 50%;
     border: 0px solid black;
-    background-color: rgba(0, 0, 0, 0.205);
+    background-color: rgba(0, 0, 0, 0.397);
     border-radius: 1.5%;
     border-top: 1px solid rgba(255, 253, 253, 0.5);
     border-left: 1px solid rgba(255, 255, 255, 0.5);
-    /* backdrop-filter: blur(2px);  */
+    font-family: 'Jost', sans-serif;
+    font-size: 1.5rem;
+    margin-bottom: 5%;
+    /* backdrop-filter: blur(1px);  */
 }
 
-.container {
+/* .linha {
+    margin: auto 0;
+    background-color: black;
+    margin-bottom: 10%;
+    width: 70%;
+    margin-left: 14%; 
+} */
+
+/* .container {
     position: relative;
     display: flex;
     justify-content: center;
@@ -117,20 +129,12 @@ body {
     font-family: "Von-Everec", sans-serif!important;
     font-size: 2.7rem!important;
     padding: 0!important;
-}
+} */
 
-#linha {
-    margin: auto 0;
-    margin-bottom: 10%;
-    width: 70%;
-    margin-left: 14%;
-}
 
-#texto-principal {
-    font-family: 'Jost', sans-serif;
-    font-size: 1.5rem;
 
-    /* position: relative;
+/* #texto-principal {
+    position: relative;
     width: 80%;
     height: 400px;
     margin: 30px;
@@ -143,6 +147,5 @@ body {
     align-items: center;
     border-top: 1px solid rgba(255, 253, 253, 0.5);
     border-left: 1px solid rgba(255, 255, 255, 0.5);
-    backdrop-filter: blur(2px); */
-  
-}
+    backdrop-filter: blur(2px);
+} */
