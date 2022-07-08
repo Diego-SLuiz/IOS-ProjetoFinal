@@ -59,57 +59,57 @@ function escreverInfo() {
 // astros
 const sun = document.querySelector('#sun');
 const mercury = {
-    speed: 0.0,
-    theta: Math.random() * Math.PI * 2 * 0,
+    speed: 0.0005,
+    theta: Math.random() * Math.PI * 2,
     radius: 70,
     el: document.querySelector('#mercury'),
 };
 
 const venus = {
-    speed: 0.0,
-    theta: Math.random() * Math.PI * 2 * 0,
+    speed: 0.0005,
+    theta: Math.random() * Math.PI * 2,
     radius: 110,
     el: document.querySelector('#venus'),
 };
 
 const earth = {
-    speed: 0.0,
-    theta: Math.random() * Math.PI * 2 * 0,
+    speed: 0.0005,
+    theta: Math.random() * Math.PI * 2,
     radius: 150,
     el: document.querySelector('#earth'),
 };
 
 const mars = {
-    speed: 0.0,
-    theta: Math.random() * Math.PI * 2 * 0,
+    speed: 0.0005,
+    theta: Math.random() * Math.PI * 2,
     radius: 190,
     el: document.querySelector('#mars'),
 };
 
 const jupiter = {
-    speed: 0.0,
-    theta: Math.random() * Math.PI * 2 * 0,
+    speed: 0.0005,
+    theta: Math.random() * Math.PI * 2,
     radius: 230,
     el: document.querySelector('#jupiter'),
 };
 
 const saturn = {
-    speed: 0.0,
-    theta: Math.random() * Math.PI * 2 * 0,
+    speed: 0.0005,
+    theta: Math.random() * Math.PI * 2,
     radius: 270,
     el: document.querySelector('#saturn'),
 };
 
 const uranus = {
-    speed: 0.0,
-    theta: Math.random() * Math.PI * 2 * 0,
+    speed: 0.0005,
+    theta: Math.random() * Math.PI * 2,
     radius: 310,
     el: document.querySelector('#uranus'),
 };
 
 const neptune = {
-    speed: 0.0,
-    theta: Math.random() * Math.PI * 2 * 0,
+    speed: 0.0005,
+    theta: Math.random() * Math.PI * 2,
     radius: 350,
     el: document.querySelector('#neptune'),
 };
@@ -133,6 +133,7 @@ function redimensionar() {
 
 // atualiza a posição dos planetas em volta do sol
 function update(planet) {
+    let id = `${planet}Container`;
     planet.theta += planet.speed;
     planet.el.style.left = `${
         Math.cos(planet.theta) * planet.radius + sunX + sun.clientWidth / 2
@@ -170,10 +171,16 @@ for (let i = 0; i < astros.length; i++) {
     astros[i].addEventListener('click', card);
 }
 function card(e) {
-    resetCard();
+    let planetID = `${e.target.id}Container`;
+
+    if (document.querySelector(`#${planetID}`) != null) {
+        resetCard();
+    }
+
     function imgAstro(img) {
         floatingCard = `
             <div class="card interactiveCardContainer">
+            <i class="bi bi-x-lg" onclick="resetCard()" id="closeForm"></i>
                 <img src="../assets/images/planetas/${todosAstos[img]}.png" class="card-img-top" alt="...">
                 <div class="card-body">
                     <h5 class="card-title" id="planetName"></h5>
@@ -256,6 +263,7 @@ function card(e) {
 function resetCard() {
     for (let i = 0; i < astros.length; i++) {
         astros[i].innerHTML = '';
+        document.getElementsByClassName('interactiveCardContainer').remove;
     }
 }
 // fim cards
