@@ -24,6 +24,15 @@ body
     color: aliceblue;
 }
 
+/* Estilo de card básico da página */
+
+.estilo-card
+{
+    border-radius: 10px;
+    backdrop-filter: blur(3px);
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
 /* Menu principal da página */
 
 #menu-container
