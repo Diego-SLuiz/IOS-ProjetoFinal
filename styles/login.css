@@ -15,6 +15,8 @@ body * {
     display: flex;
     justify-content: center;
     align-items: center;
+    font-family: 'Jost', sans-serif;
+    font-size: 1.1rem;
 }
 
 .left-login {
@@ -27,12 +29,13 @@ body * {
 }
 
 .left-login h1 {
-    color: #77ffc0;
+    color: rgba(255, 255, 255, 0.932);
     font-size: 3vw;
 }
 
 .left-login-image{
-    width: 35vw;
+    width: 33.5vw;
+    margin-bottom: 8%;
 }
 
 .right-login{
@@ -53,12 +56,18 @@ body * {
     background: #2f2841;
     border-radius: 20px;
     box-shadow: 0px 10px 40px #00000056;
+    border-top: 1px solid rgba(255, 253, 253, 0.5);
+    border-left: 1px solid rgba(255, 255, 255, 0.5);
+    margin-top: 15%;
 }
 
 .card-login h1 {
-    color: #00ff88;
+    color: rgb(37, 192, 253);
     font-weight: 800;
     margin: 0;
+    font-family: "Von-Everec", sans-serif!important;
+    font-size: 2.7rem!important;
+    padding: 0!important;
 }
 
 .textfield {
