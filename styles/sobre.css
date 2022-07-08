@@ -17,8 +17,12 @@ main{
   /* flex-direction: column; */
   justify-content: space-around;
   flex-wrap: wrap;
-  gap: 60px;
+  gap: 40px;
+  
 }
+
+
+
 .sobre {
 
   /* width: 100%; */
@@ -26,29 +30,34 @@ main{
   padding: 1rem;
   box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
   border-radius: 15px;
-  background: rgba(0, 0, 0, 0.363);
+  background: rgba(0, 0, 0, 0.541);
   text-align: center;
   color: white;
-  backdrop-filter: blur(5px);
+  backdrop-filter: blur(3px);
+  transition:.5s; 
+  border-top: 1px solid rgb(255, 253 ,253, 0.5);
+  border-left: 1px solid rgb(255, 253 ,253, 0.5);
   
+  
+}
+#jornada{
+
+  width:100%;
+
  
-  
-}
-.sobre{
-  transition: all 2.9s;
-  border: 10px solid #eeeeee0a;
-}
-.sobre:hover{
-  border: 10px solid #2b1f782f;
-  border-radius: 50%;
-  -webkit-filter: drop-shadow(15px 7px 1px rgba(0,0,0,.5));
-  filter: drop-shadow(15px 7px 1px rgba(0,0,0,.5));
-  -webkit-transform: rotateZ(-360deg) scale(1.5);
-  transform: rotateZ(-360deg) scale(1.5);
+  padding: 1rem;
+
 }
 
+
+.sobre:hover { 
+	transform: translateY(-10px);   
+	box-shadow: 0 2px 5px rgba(3, 97, 141, 0.137); 
+}
+
+
 .sobre p {
-  color: rgb(197, 229, 235);
+  color: white;
   font-size: 20px;
   text-align: center;
   padding-bottom: 5px;
@@ -60,7 +69,7 @@ main{
 .sobre h5 {
   padding: 2px;
   font-family: Von-Everec;
-  color: rgba(255, 255, 255, 0.992);
+  color: rgba(37, 192 ,253);
   font-size: 48px;
   transition: all 0.5s;
   cursor: pointer;
