@@ -1,7 +1,6 @@
 body {
     background-color: black !important;
     background-image: url(../assets/images/test-bg.jpg);
-    overflow: hidden !important;
     color: aliceblue !important;
 }
 
@@ -126,6 +125,9 @@ img {
 #openForm {
     color: aliceblue;
     cursor: pointer;
+    position: fixed;
+    right: 0;
+    top: 50vh;
 }
 
 #openForm:hover {
@@ -149,9 +151,157 @@ img {
     border: 1px solid black;
     backdrop-filter: blur(4px);
 }
+/* fim modal */
 
-/* responsividade do modal */
+/* planetas */
+.planet {
+    position: absolute;
+    border-radius: 50%;
+}
+
+#sun {
+    background-color: orange;
+    width: 50px;
+    height: 50px;
+}
+
+#mercury {
+    background-color: gray;
+    width: 5px;
+    height: 5px;
+}
+
+#venus {
+    background-color: chocolate;
+    width: 10px;
+    height: 10px;
+}
+
+#earth {
+    background-color: royalblue;
+    width: 12px;
+    height: 12px;
+}
+
+#mars {
+    background-color: brown;
+    width: 11px;
+    height: 11px;
+}
+/* 
+#asteroid {
+    
+} */
+
+#jupiter {
+    background-color: rosybrown;
+    width: 35px;
+    height: 35px;
+}
+
+#saturn {
+    background-color: tan;
+    width: 25px;
+    height: 25px;
+}
+
+#uranus {
+    background-color: aqua;
+    width: 20px;
+    height: 20px;
+}
+
+#neptune {
+    background-color: blue;
+    width: 25px;
+    height: 25px;
+}
+/* fim planetas */
+
+/* cards */
+.cardsContainer {
+    margin: 0 auto !important;
+}
+
+.card {
+    max-width: 260px;
+    min-width: 260px !important;
+    background-color: rgba(0, 0, 0, 0.6) !important;
+    backdrop-filter: blur(2px);
+    border: 1px aliceblue solid !important;
+    border-radius: 10px;
+}
+
+.cardsContainer img {
+    max-width: 50%;
+    height: 30%;
+    margin: 0 auto !important;
+}
+
+/* cards interativos */
+.interactiveCardContainer {
+    width: 18rem;
+    position: relative;
+    background-color: rgba(0, 0, 0, .6) !important;
+    backdrop-filter: blur(2px);
+    z-index: 2000 !important;
+}
+
+/* side cards */
+.sideCardContainer {
+    background-color: rgba(40, 40, 40, 0.6);
+    backdrop-filter: blur(2px);
+    box-shadow: 10px 0px 30px 50px rgba(40, 40, 40, 0.6);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 30vw;
+    height: 100vh;
+    z-index: 3000 !important;
+    overflow: auto;
+}
+
+.sideCard {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    width: 70%;
+    height: 50px;
+    border: 1px solid white;
+    border-radius: 10px;
+    margin-bottom: 1vh;
+}
+
+.sideCardImg, .sideCardText, .sideCardBtn {
+    flex: 1 0 30%;
+}
+
+.sideCardImg {
+    width: 30%;
+    height: 100%;
+    margin: 0 !important;
+}
+
+.sideCardText {
+    margin: 0;
+    text-align: center;
+}
+
+.sideCardBtn {
+    text-align: center;
+    text-decoration: none;
+}
+
+/* fim dos cards */
+
+/* responsividade */
 @media ( max-width: 900px ) {
+    /* responsividade do modal */
     #conteudo {
         width: 90vw;
     }
@@ -188,70 +338,6 @@ img {
         border-radius: 10px 10px 0 0 !important;
         width: 70vw !important;
     }
-}
-/* fim modal */
-
-/* planetas */
-.planet {
-    position: absolute;
-    border-radius: 50%;
-}
-
-#sun {
-    background-color: orange;
-    width: 100px;
-    height: 100px;
-}
-
-#mercury {
-    background-color: gray;
-    width: 10px;
-    height: 10px;
-}
-
-#venus {
-    background-color: chocolate;
-    width: 20px;
-    height: 20px;
-}
-
-#earth {
-    background-color: royalblue;
-    width: 25px;
-    height: 25px;
-}
-
-#mars {
-    background-color: brown;
-    width: 22px;
-    height: 22px;
-}
-/* 
-#asteroid {
     
-} */
-
-#jupiter {
-    background-color: rosybrown;
-    width: 70px;
-    height: 70px;
+    /* responsividade dos cards do lado */
 }
-
-#saturn {
-    background-color: tan;
-    width: 50px;
-    height: 50px;
-}
-
-#uranus {
-    background-color: aqua;
-    width: 40px;
-    height: 40px;
-}
-
-#neptune {
-    background-color: blue;
-    width: 50px;
-    height: 50px;
-}
-/* fim planetas */
