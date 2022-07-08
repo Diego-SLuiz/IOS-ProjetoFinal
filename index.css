@@ -57,6 +57,7 @@ body
 {
     background-color: rgba(43, 30, 43, 0.7);
     backdrop-filter: blur(4px);
+    /* height: 75px; */
 }
 
 #menu-linha-externa
@@ -82,24 +83,42 @@ body
 
 .menu-item
 {
+    position: relative;
     text-decoration: none;
     color: aliceblue;
     margin: 1rem;
+}
+
+.menu-item:hover
+{
+    color: rgba(0, 238, 255, 0.8);
+}
+
+.menu-item::after{
+    content: " ";
+    width: 0%;
+    height: 2px;
+    background-color: rgb(238, 204, 204);
+    background-image: linear-gradient(45deg, #0011ff, #00e1ff);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    top: 22px;
+    transition: 0.5s ease-in-out;
+}
+
+.menu-item:hover::after {
+    width: 100%;
+} 
+
+.menu-ativo::after {
+    width: 100%;
 }
 
 .menu-numero
 {
     font-weight: 800;
     margin: 0 5px;
-}
-
-@keyframes btnHover {
-    from {
-        color: aliceblue;
-    }
-    to {
-        color: rgba(0, 238, 255, 0.8);
-    }
 }
 
 .hover {
@@ -109,7 +128,6 @@ body
 .hover:hover {
     animation: btnHover .3s;
     transform: scale(1.02);
-    color: rgba(0, 238, 255, 0.8);
 }
 
 @media ( min-width: 992px )
@@ -204,24 +222,3 @@ body
     transform: scale(1.1);
     background-color: rgba(36, 36, 36, 0.267);
 }
-
-/* nav a {
-    position: relative;
-}
-
-nav a::after{
-    content: " ";
-    width: 0%;
-    height: 2px;
-    background-color: rgb(238, 204, 204);
-    background-image: linear-gradient(45deg, #0011ff, #00e1ff);
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    top: 22px;
-    transition: 0.5s ease-in-out;
-}
-
-nav a:hover::after {
-    width: 100%;
-} */

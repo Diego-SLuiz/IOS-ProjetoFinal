@@ -21,10 +21,12 @@ let headerContent = `
         </button>
 
         <div id="menu-navegacao" class="collapse navbar-collapse navbar-nav justify-content-lg-center">
-            <a href="" class="menu-item nav-item hover"><span class="menu-numero">00</span>Início</a>
-            <a href="" class="menu-item nav-item hover"><span class="menu-numero">01</span>Curiosidades</a>
-            <a href="" class="menu-item nav-item hover"><span class="menu-numero">02</span>Destinos</a>
-            <a href="" class="menu-item nav-item hover"><span class="menu-numero">03</span>Sobre</a>
+        
+            <a href="" class="menu-item nav-item hover menu-ativo"><span class="menu-numero">00</span>Início</a>
+            <a href="" class="menu-item nav-item hover "><span class="menu-numero">01</span>Curiosidades</a>
+            <a href="" class="menu-item nav-item hover "><span class="menu-numero">02</span>Destinos</a>
+            <a href="" class="menu-item nav-item hover "><span class="menu-numero">03</span>Sobre</a>
+        
         </div>
     </nav>
 `;
