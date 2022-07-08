@@ -24,6 +24,8 @@ body
     color: aliceblue;
 }
 
+/* Menu principal da página */
+
 #menu-container
 {
     padding: 2rem;
@@ -107,4 +109,89 @@ body
     {
         max-width: 50%;
     }
+}
+
+/* Footer principal da página */
+
+#footer
+{
+    position: relative;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    box-sizing: border-box;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    /*  padding: 1rem; */
+}
+
+#footer-linha
+{
+    position: absolute;
+    border: 0;
+    background-color: rgba(255, 255, 255, 0.822);
+    width: 80%;
+    top: 0;
+    left: 50%;
+    transform: translate( -50%, 0);
+    height: 1px;
+    margin: 0;
+}
+
+#footer-copyright
+{
+    justify-self: start;
+    align-self: center;
+    color: white;
+    font-style: italic;
+}
+
+#footer-copyright p
+{
+    margin: 0;
+}
+
+.footer-icone
+{
+    color: white;
+}
+
+.footer-titulo
+{
+    margin: 0;
+}
+
+#footer .item-container
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    padding-top: 1rem;
+}
+
+.footer-item
+{
+    color: white;
+    transition: 0.5s all ease;
+    display: flex;
+    flex-direction: column;
+    justify-items: flex-start;
+    align-items: center;
+    width: 75px;
+}
+
+.footer-item hr
+{
+    width: 100%;
+}
+
+.footer-item:hover
+{
+    transform: scale(1.1);
+    background-color: rgba(36, 36, 36, 0.267);
 }
