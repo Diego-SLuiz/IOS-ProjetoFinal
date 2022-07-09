@@ -32,7 +32,7 @@
         <div>
             <!-- conteúdo principal -->
             <div>
-                <div id="animationContainer">
+                <!-- <div id="animationContainer">
                     <div id="sunContainer">
                         <div class="astro planet" id="sun"></div>
                     </div>
@@ -72,193 +72,39 @@
                     <div id="neptuneContainer">
                         <div class="astro planet" id="neptune"></div>
                     </div>
+                </div> -->
+                
+                <div class="cardsContainer">
+                    <div class="cardClass">
+                        <h5 class="cardTitle">Terra</h5>
+                        <img src="../assets/images/planetas/Terra.png">
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tenetur assumenda rem itaque alias quas adipisci, eveniet saepe, natus ut fugit doloribus doloremque quisquam sed aliquam recusandae quibusdam, minus distinctio? Excepturi.</p>
+                        <div class="cardButtons">
+                            <button class="btn btn-primary">Saiba Mais</button>
+                            <button class="btn btn-outline-light" onclick="openForm()">Viagem</button>
+                        </div>
+                    </div>
+                    
+                    <div class="cardClass">
+                        <h5 class="cardTitle">Marte</h5>
+                        <img src="../assets/images/planetas/Marte.png">
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tenetur assumenda rem itaque alias quas adipisci, eveniet saepe, natus ut fugit doloribus doloremque quisquam sed aliquam recusandae quibusdam, minus distinctio? Excepturi.</p>
+                        <div class="cardButtons">
+                            <button class="btn btn-primary">Saiba Mais</button>
+                            <button class="btn btn-outline-light" onclick="openForm()">Viagem</button>
+                        </div>
+                    </div>
+                    
+                    <div class="cardClass">
+                        <h5 class="cardTitle">"Lua"</h5>
+                        <img src="../assets/images/planetas/Mercurio.png">
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tenetur assumenda rem itaque alias quas adipisci, eveniet saepe, natus ut fugit doloribus doloremque quisquam sed aliquam recusandae quibusdam, minus distinctio? Excepturi.</p>
+                        <div class="cardButtons">
+                            <button class="btn btn-primary">Saiba Mais</button>
+                            <button class="btn btn-outline-light" onclick="openForm()">Viagem</button>
+                        </div>
+                    </div>
                 </div>
-                
-                <!-- <div class="cardsContainer" style="margin-top: 100vh !important;;">
-                    <i class="bi bi-arrow-up-left-square" onclick="openForm()" id="openForm"></i>
-                    
-                    <div class="card-group">
-                        <div class="card">
-                            <img src="../assets/images/planetas/Sol.png" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">Sol</h5>
-                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                            </div>
-                            <div class="card-body">
-                                <button type="button" class="btn btn-primary btn-sm">Saiba mais</button>
-                                <button type="button" class="btn btn-secondary btn-sm" disabled>Viagem Impossivel</button>
-                            </div>
-                        </div>
-                        
-                        <div class="card">
-                            <img src="../assets/images/planetas/Mercurio.png" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">Mercúrio</h5>
-                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                            </div>
-                            <div class="card-body">
-                                <button type="button" class="btn btn-primary btn-sm">Saiba mais</button>
-                                <button type="button" class="btn btn-secondary btn-sm">Viage</button>
-                            </div>
-                        </div>
-                        
-                        <div class="card">
-                            <img src="../assets/images/planetas/Venus.png" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">Venus</h5>
-                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                            </div>
-                            <div class="card-body">
-                                <button type="button" class="btn btn-primary btn-sm">Saiba mais</button>
-                                <button type="button" class="btn btn-secondary btn-sm">Viage</button>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="card-group">
-                        <div class="card">
-                            <img src="../assets/images/planetas/Terra.png" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">Terra</h5>
-                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                            </div>
-                            <div class="card-body">
-                                <button type="button" class="btn btn-primary btn-sm">Saiba mais</button>
-                                <button type="button" class="btn btn-secondary btn-sm">Viage</button>
-                            </div>
-                        </div>
-                        
-                        <div class="card">
-                            <img src="../assets/images/planetas/Marte.png" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">Marte</h5>
-                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                            </div>
-                            <div class="card-body">
-                                <button type="button" class="btn btn-primary btn-sm">Saiba mais</button>
-                                <button type="button" class="btn btn-secondary btn-sm">Viage</button>
-                            </div>
-                        </div>
-                        
-                        <div class="card">
-                            <img src="../assets/images/planetas/" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">Cinturão de Asteróides</h5>
-                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                            </div>
-                            <div class="card-body">
-                                <button type="button" class="btn btn-primary btn-sm">Saiba mais</button>
-                                <button type="button" class="btn btn-secondary btn-sm">Viage</button>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="card-group">
-                        <div class="card">
-                            <img src="../assets/images/planetas/Jupiter.png" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">Júpiter</h5>
-                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                            </div>
-                            <div class="card-body">
-                                <button type="button" class="btn btn-primary btn-sm">Saiba mais</button>
-                                <button type="button" class="btn btn-secondary btn-sm">Viage</button>
-                            </div>
-                        </div>
-                        
-                        <div class="card">
-                            <img src="../assets/images/planetas/Saturno.png" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">Saturno</h5>
-                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                            </div>
-                            <div class="card-body">
-                                <button type="button" class="btn btn-primary btn-sm">Saiba mais</button>
-                                <button type="button" class="btn btn-secondary btn-sm">Viage</button>
-                            </div>
-                        </div>
-                        
-                        <div class="card">
-                            <img src="../assets/images/planetas/Urano.png" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">Urano</h5>
-                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                            </div>
-                            <div class="card-body">
-                                <button type="button" class="btn btn-primary btn-sm">Saiba mais</button>
-                                <button type="button" class="btn btn-secondary btn-sm">Viage</button>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="card-group">
-                        <div class="card">
-                            <img src="../assets/images/planetas/Netuno.png" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">Netuno</h5>
-                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                            </div>
-                            <div class="card-body">
-                                <button type="button" class="btn btn-primary btn-sm">Saiba mais</button>
-                                <button type="button" class="btn btn-secondary btn-sm">Viage</button>
-                            </div>
-                        </div>
-                    </div>
-                </div> -->
-                
-                <!--
-                <div class="sideCardContainer">
-                    <div class="sideCard" id="sunSideCard">
-                        <img class="sideCardImg" src="../assets/images/planetas/Sol.png">
-                        <p class="sideCardText">Sol</p>
-                        <a class="sideCardBtn" href="#">clique</a>
-                    </div>
-                    <div class="sideCard" id="mercurySideCard">
-                        <img class="sideCardImg" src="../assets/images/planetas/Mercurio.png">
-                        <p class="sideCardText">Mercúrio</p>
-                        <a class="sideCardBtn" href="#">clique</a>
-                    </div>
-                    <div class="sideCard" id="venusSideCard">
-                        <img class="sideCardImg" src="../assets/images/planetas/Venos.png">
-                        <p class="sideCardText">Vênus</p>
-                        <a class="sideCardBtn" href="#">clique</a>
-                    </div>
-                    <div class="sideCard" id="earthSideCard">
-                        <img class="sideCardImg" src="../assets/images/planetas/Terra.png">
-                        <p class="sideCardText">Terra</p>
-                        <a class="sideCardBtn" href="#">clique</a>
-                    </div>
-                    <div class="sideCard" id="marsSideCard">
-                        <img class="sideCardImg" src="../assets/images/planetas/Marte.png">
-                        <p class="sideCardText">Marte</p>
-                        <a class="sideCardBtn" href="#">clique</a>
-                    </div>
-                    <div class="sideCard" id="asteroidSideCard">
-                        <img class="sideCardImg" src="../assets/images/planetas/">
-                        <p class="sideCardText">Asteróides</p>
-                        <a class="sideCardBtn" href="#">clique</a>
-                    </div>
-                    <div class="sideCard" id="jupiterSideCard">
-                        <img class="sideCardImg" src="../assets/images/planetas/Jupiter.png">
-                        <p class="sideCardText">Júpiter</p>
-                        <a class="sideCardBtn" href="#">clique</a>
-                    </div>
-                    <div class="sideCard" id="saturnSideCard">
-                        <img class="sideCardImg" src="../assets/images/planetas/Saturno.png">
-                        <p class="sideCardText">Saturno</p>
-                        <a class="sideCardBtn" href="#">clique</a>
-                    </div>
-                    <div class="sideCard" id="uranusSideCard">
-                        <img class="sideCardImg" src="../assets/images/planetas/Urano.png">
-                        <p class="sideCardText">Urano</p>
-                        <a class="sideCardBtn" href="#">clique</a>
-                    </div>
-                    <div class="sideCard" id="neptuneSideCard">
-                        <img class="sideCardImg" src="../assets/images/planetas/Netuno.png">
-                        <p class="sideCardText">Netuno</p>
-                        <a class="sideCardBtn" href="#">clique</a>
-                    </div>
-                </div> -->
             </div>
 
             <!-- modal -->
@@ -266,11 +112,6 @@
                 <div class="" id="formContainer" onblur="closeForm()">
                     <div id="conteudo">
                         <i class="bi bi-x-lg" onclick="closeForm()" id="closeForm"></i>
-                        <div id="info">
-                            <div id="planeta"></div>
-                            <div id="planetaInfo"></div>
-                        </div>
-                        
                         <form id="form">
                             <p>Crie sua conta</p>
                             <div class="input-group" id="nomeCompleto">

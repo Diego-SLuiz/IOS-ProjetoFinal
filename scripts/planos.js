@@ -4,7 +4,6 @@ const conteudo = document.getElementById('conteudo');
 
 // evento do botão de abrir modal
 function openForm() {
-    escreverInfo();
     document.getElementById('formContainer').className = 'show';
     document.body.style.overflow = 'hidden';
     document.body.scroll = 'no';
@@ -34,83 +33,63 @@ function formDone(e) {
 
     console.log(nome, sobreNome, usuario, eMail, senha, idade);
 }
-
-// escreve as informações do planeta clicado
-function escreverInfo() {
-    let infoTexto = document.getElementById('planetaInfo');
-    let infoImg = document.getElementById('planeta');
-
-    let imgTeste = `
-        <img src="../assets/images/terra.jpg">
-    `;
-
-    let textoTeste = `
-        <h3 class="nomePlaneta">Planeta</h3>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum nam asperiores rerum sunt! Praesentium labore inventore recusandae, tempore aspernatur pariatur nostrum necessitatibus itaque illum sapiente dicta eveniet officia tempora. Excepturi.</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum nam asperiores rerum sunt! Praesentium labore inventore recusandae, tempore aspernatur pariatur nostrum necessitatibus itaque illum sapiente dicta eveniet officia tempora. Excepturi.</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum nam asperiores rerum sunt! Praesentium labore inventore recusandae, tempore aspernatur pariatur nostrum necessitatibus itaque illum sapiente dicta eveniet officia tempora. Excepturi.</p>
-    `;
-
-    infoImg.innerHTML = imgTeste;
-    infoTexto.innerHTML = textoTeste;
-}
 // fim modal
 
 // astros
 const sun = document.querySelector('#sun');
 const mercury = {
-    speed: 0.0005,
-    theta: Math.random() * Math.PI * 2,
-    radius: 70,
+    speed: 0.0,
+    theta: Math.random() * Math.PI * 2 * 0,
+    radius: 50,
     el: document.querySelector('#mercury'),
 };
 
 const venus = {
-    speed: 0.0005,
-    theta: Math.random() * Math.PI * 2,
-    radius: 110,
+    speed: 0.0,
+    theta: Math.random() * Math.PI * 2 * 0,
+    radius: 70,
     el: document.querySelector('#venus'),
 };
 
 const earth = {
-    speed: 0.0005,
-    theta: Math.random() * Math.PI * 2,
-    radius: 150,
+    speed: 0.0,
+    theta: Math.random() * Math.PI * 2 * 0,
+    radius: 90,
     el: document.querySelector('#earth'),
 };
 
 const mars = {
-    speed: 0.0005,
-    theta: Math.random() * Math.PI * 2,
-    radius: 190,
+    speed: 0.0,
+    theta: Math.random() * Math.PI * 2 * 0,
+    radius: 110,
     el: document.querySelector('#mars'),
 };
 
 const jupiter = {
-    speed: 0.0005,
-    theta: Math.random() * Math.PI * 2,
-    radius: 230,
+    speed: 0.0,
+    theta: Math.random() * Math.PI * 2 * 0,
+    radius: 130,
     el: document.querySelector('#jupiter'),
 };
 
 const saturn = {
-    speed: 0.0005,
-    theta: Math.random() * Math.PI * 2,
-    radius: 270,
+    speed: 0.0,
+    theta: Math.random() * Math.PI * 2 * 0,
+    radius: 180,
     el: document.querySelector('#saturn'),
 };
 
 const uranus = {
-    speed: 0.0005,
-    theta: Math.random() * Math.PI * 2,
-    radius: 310,
+    speed: 0.0,
+    theta: Math.random() * Math.PI * 2 * 0,
+    radius: 220,
     el: document.querySelector('#uranus'),
 };
 
 const neptune = {
-    speed: 0.0005,
-    theta: Math.random() * Math.PI * 2,
-    radius: 350,
+    speed: 0.0,
+    theta: Math.random() * Math.PI * 2 * 0,
+    radius: 250,
     el: document.querySelector('#neptune'),
 };
 
@@ -133,7 +112,6 @@ function redimensionar() {
 
 // atualiza a posição dos planetas em volta do sol
 function update(planet) {
-    let id = `${planet}Container`;
     planet.theta += planet.speed;
     planet.el.style.left = `${
         Math.cos(planet.theta) * planet.radius + sunX + sun.clientWidth / 2
