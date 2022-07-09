@@ -4,8 +4,9 @@ body {
 
 .sobre
 {
-    margin-top: 18%;
-    transform: translate( 0, -50% );
+    position: absolute;
+    top: 50%;
+    transform: translateY( -50% );
     padding: 0 3rem;
     display: flex;
     justify-content: space-between;
@@ -25,7 +26,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-right: 5%;
+    /* margin-right: 5%; */
     animation: treme 3.5s;
     animation-iteration-count: infinite;
 }
@@ -56,10 +57,11 @@ body {
 }
 
 #destaque {
-    color: rgb(37, 192, 253);
+    /* color: rgb(37, 192, 253); */
     align-items: center;
     font-family: "Von-Everec", sans-serif!important;
     font-size: 5rem!important;
+    line-height: 30px;
 }
 
 #texto-principal
@@ -68,11 +70,10 @@ body {
     border: 0px solid black;
     background-color: rgba(0, 0, 0, 0.397);
     border-radius: 1.5%;
-    border-top: 1px solid rgba(255, 253, 253, 0.5);
-    border-left: 1px solid rgba(255, 255, 255, 0.5);
+    border-top: 1px solid rgba(255, 253, 253, 0.212);
+    border-left: 1px solid rgba(255, 255, 255, 0.164);
     font-family: 'Jost', sans-serif;
     font-size: 1.5rem;
-    margin-bottom: 5%;
     /* backdrop-filter: blur(1px);  */
 }
 
