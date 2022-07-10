@@ -14,25 +14,20 @@ let footerContent = `
     </div>
 
     <div class="item-container">
-        <div class="footer-item">
-            <i class="footer-icone bi bi-instagram"></i>
+        <a href="https://www.instagram.com/" target="_blank" class="footer-item">
+            <i target="_blank" class="footer-icone bi bi-instagram"></i>
             <hr>
-        </div>
+        </a>
 
-        <div class="footer-item">
-            <i class="footer-icone bi bi-facebook"></i>
+        <a href="https://www.facebook.com/" target="_blank" class="footer-item">
+            <i target="_blank" class="footer-icone bi bi-facebook"></i>
             <hr>
-        </div>
+        </a>
 
-        <div class="footer-item">
-            <i class="footer-icone bi bi-twitter"></i>
+        <a href="https://www.twitter.com/" target="_blank" class="footer-item">
+            <i target="_blank" class="footer-icone bi bi-twitter"></i>
             <hr>
-        </div>
-
-        <div class="footer-item">
-            <i class="footer-icone bi bi-google"></i>
-            <hr>
-        </div>
+        </a>
     </div>
 `;
 

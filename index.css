@@ -208,13 +208,16 @@ body
     width: 75px;
 }
 
+.footer-item:hover
+{
+    transform: scale(1.1);
+    background-color: rgba(36, 36, 36, 0.267);
+    cursor: pointer;
+    color: white;
+}
+
 .footer-item hr
 {
     width: 100%;
 }
 
-.footer-item:hover
-{
-    transform: scale(1.1);
-    background-color: rgba(36, 36, 36, 0.267);
-}
