@@ -1,5 +1,6 @@
 body {
     background-image: url(../assets/images/fundo-destinos.jpg);
+    color: aliceblue !important;
 }
 
 /* modal */
@@ -109,18 +110,6 @@ img {
 
 #usuario, #e-mail, #senha, #data {
     flex: 1 0 40%;
-}
-
-#openForm {
-    color: aliceblue;
-    cursor: pointer;
-    position: fixed;
-    right: 0;
-    top: 50vh;
-}
-
-#openForm:hover {
-    color: darkorange;
 }
 
 @keyframes openForm {
@@ -243,7 +232,7 @@ img {
 }
 
 .cardClass img {
-    margin: 0 auto!important;
+    margin: 0 auto !important;
     width: 70% !important;
 }
 
