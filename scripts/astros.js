@@ -14,16 +14,17 @@ function astroAnterior ()
 
 function atualizarInformacoes ()
 {
+    let nome = listaAstroInformacoes[ indiceAtual ].nome;
+    let descricao = listaAstroInformacoes[ indiceAtual ].descricao;
     let tamanho = listaAstroInformacoes[ indiceAtual ].tamanho;
     let temperatura = listaAstroInformacoes[ indiceAtual ].temperatura;
     let gravidade = listaAstroInformacoes[ indiceAtual ].gravidade;
 
-    astroNome.innerText = listaAstroInformacoes[ indiceAtual ].nome;
-    astroDescricao.innerText = listaAstroInformacoes[ indiceAtual ].descricao;
-    astroTamanho.childNodes[ 1 ].nodeValue = tamanho;
-    astroTemperatura.childNodes[ 1 ].nodeValue = temperatura;
-    astroGravidade.childNodes[ 1 ].nodeValue = gravidade;
-    console.log( gravidade )
+    astroNome.innerText = nome;
+    astroDescricao.innerText = descricao;
+    astroTamanho.innerText = tamanho;
+    astroTemperatura.innerText = temperatura;
+    astroGravidade.innerText = gravidade;
 }
 
 // Array contendo as informações que serão adicionadas

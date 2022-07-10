@@ -14,6 +14,8 @@ main
     gap: 2rem;
     padding: 0 2rem;
     margin-bottom: 1rem;
+    max-width: 1400px;
+    margin: auto;
 }
 
 /* Estilizações e configuração dos astros */
@@ -59,6 +61,13 @@ main
 
 /* Slider que contém os astros */
 
+.carousel-caption
+{
+    font-family: "Von-Everec", sans-serif!important;
+    font-size: 2rem!important;
+    padding: 0!important;
+}
+
 #astro-slider
 {
     width: 400px!important;
@@ -76,6 +85,8 @@ main
     backdrop-filter: blur(1px);
     font-family: 'Jost', sans-serif;
     font-size: 1.1rem;
+    display: flex;
+    flex-direction: column;
 }
 
 #astro-nome
@@ -89,13 +100,90 @@ main
 .astro-atributo
 {
     font-weight: 600;
+    text-align: center;
 }
 
-.carousel-caption
+#atributos-container
 {
-    font-family: "Von-Everec", sans-serif!important;
-    font-size: 2rem!important;
-    padding: 0!important;
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: auto;
+}
+
+.atributo-item
+{
+    border-top: 2px solid rgba(255, 255, 255, 0.301);
+}
+
+@media ( max-width: 850px )
+{
+    main
+    {
+        flex-direction: column;
+    }
+
+    #astro-informacoes
+    {
+        order: -1;
+    }
+
+    #astro-slider
+    {
+        margin: 0 auto;
+    }
+}
+
+@media ( max-width: 475px )
+{
+    main
+    {
+        padding: 0;
+    }
+
+    #astro-informacoes
+    {
+        gap: 1rem;
+    }
+
+    .atributo-item p
+    {
+        text-align: center;
+    }
+
+    #astro-slider
+    {
+        width: 300px!important;
+        height: 300px!important;
+    }
+
+    .astro-container
+    {
+        width: 300px;
+        height: 300px;
+    }
+
+    #atributos-container
+    {
+        flex-direction: column;
+    }
+
+    #earth
+    {
+        width: 250px;
+        height: 250px;
+    }
+
+    #moon
+    {
+        width: 100px;
+        height: 100px;
+    }
+
+    #mars
+    {
+        width: 200px;
+        height: 200px;
+    }
 }
 
 @keyframes girar
