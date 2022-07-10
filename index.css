@@ -142,6 +142,15 @@ body
     }
 }
 
+@media ( max-width: 575px )
+{
+    #menu-container
+    {
+        padding: 0;
+        padding-bottom: 2rem;
+    }
+}
+
 /* Footer principal da página */
 
 #footer
@@ -221,3 +230,10 @@ body
     width: 100%;
 }
 
+@media ( max-width: 620px )
+{
+    #footer
+    {
+        flex-direction: column;
+    }
+}
