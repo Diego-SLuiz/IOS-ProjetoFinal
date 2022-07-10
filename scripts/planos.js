@@ -4,7 +4,6 @@ const conteudo = document.getElementById('conteudo');
 
 // evento do botão de abrir modal
 function openForm() {
-    escreverInfo();
     document.getElementById('formContainer').className = 'show';
     document.body.style.overflow = 'hidden';
     document.body.scroll = 'no';
@@ -34,26 +33,6 @@ function formDone(e) {
 
     console.log(nome, sobreNome, usuario, eMail, senha, idade);
 }
-
-// escreve as informações do planeta clicado
-function escreverInfo() {
-    let infoTexto = document.getElementById('planetaInfo');
-    let infoImg = document.getElementById('planeta');
-
-    let imgTeste = `
-        <img src="../assets/images/terra.jpg">
-    `;
-
-    let textoTeste = `
-        <h3 class="nomePlaneta">Planeta</h3>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum nam asperiores rerum sunt! Praesentium labore inventore recusandae, tempore aspernatur pariatur nostrum necessitatibus itaque illum sapiente dicta eveniet officia tempora. Excepturi.</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum nam asperiores rerum sunt! Praesentium labore inventore recusandae, tempore aspernatur pariatur nostrum necessitatibus itaque illum sapiente dicta eveniet officia tempora. Excepturi.</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum nam asperiores rerum sunt! Praesentium labore inventore recusandae, tempore aspernatur pariatur nostrum necessitatibus itaque illum sapiente dicta eveniet officia tempora. Excepturi.</p>
-    `;
-
-    infoImg.innerHTML = imgTeste;
-    infoTexto.innerHTML = textoTeste;
-}
 // fim modal
 
 // astros
@@ -61,56 +40,56 @@ const sun = document.querySelector('#sun');
 const mercury = {
     speed: 0.0,
     theta: Math.random() * Math.PI * 2 * 0,
-    radius: 70,
+    radius: 50,
     el: document.querySelector('#mercury'),
 };
 
 const venus = {
     speed: 0.0,
     theta: Math.random() * Math.PI * 2 * 0,
-    radius: 110,
+    radius: 70,
     el: document.querySelector('#venus'),
 };
 
 const earth = {
     speed: 0.0,
     theta: Math.random() * Math.PI * 2 * 0,
-    radius: 150,
+    radius: 90,
     el: document.querySelector('#earth'),
 };
 
 const mars = {
     speed: 0.0,
     theta: Math.random() * Math.PI * 2 * 0,
-    radius: 190,
+    radius: 110,
     el: document.querySelector('#mars'),
 };
 
 const jupiter = {
     speed: 0.0,
     theta: Math.random() * Math.PI * 2 * 0,
-    radius: 230,
+    radius: 130,
     el: document.querySelector('#jupiter'),
 };
 
 const saturn = {
     speed: 0.0,
     theta: Math.random() * Math.PI * 2 * 0,
-    radius: 270,
+    radius: 180,
     el: document.querySelector('#saturn'),
 };
 
 const uranus = {
     speed: 0.0,
     theta: Math.random() * Math.PI * 2 * 0,
-    radius: 310,
+    radius: 220,
     el: document.querySelector('#uranus'),
 };
 
 const neptune = {
     speed: 0.0,
     theta: Math.random() * Math.PI * 2 * 0,
-    radius: 350,
+    radius: 250,
     el: document.querySelector('#neptune'),
 };
 
@@ -170,10 +149,16 @@ for (let i = 0; i < astros.length; i++) {
     astros[i].addEventListener('click', card);
 }
 function card(e) {
-    resetCard();
+    let planetID = `${e.target.id}Container`;
+
+    if (document.querySelector(`#${planetID}`) != null) {
+        resetCard();
+    }
+
     function imgAstro(img) {
         floatingCard = `
             <div class="card interactiveCardContainer">
+            <i class="bi bi-x-lg" onclick="resetCard()" id="closeForm"></i>
                 <img src="../assets/images/planetas/${todosAstos[img]}.png" class="card-img-top" alt="...">
                 <div class="card-body">
                     <h5 class="card-title" id="planetName"></h5>
@@ -256,6 +241,7 @@ function card(e) {
 function resetCard() {
     for (let i = 0; i < astros.length; i++) {
         astros[i].innerHTML = '';
+        document.getElementsByClassName('interactiveCardContainer').remove;
     }
 }
 // fim cards
