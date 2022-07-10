@@ -1,7 +1,5 @@
 body {
-    background-color: black !important;
     background-image: url(../assets/images/fundo-destinos.jpg);
-    color: aliceblue !important;
 }
 
 /* modal */
@@ -319,6 +317,4 @@ img {
         border-radius: 10px 10px 0 0 !important;
         width: 70vw !important;
     }
-    
-    /* responsividade dos cards do lado */
 }
