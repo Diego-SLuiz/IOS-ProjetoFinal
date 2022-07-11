@@ -16,6 +16,8 @@ body
     min-height: 100%;
     padding: 0;
     margin: 0;
+    background-color: black!important;
+    overflow-y: scroll;
 
     background-color: #06000c;
     background-repeat: no-repeat;
