@@ -207,7 +207,7 @@ function card(e) {
         case 'asteroid':
             imgAstro(5);
             document.getElementById('planetName').innerHTML =
-                'Cinturão de asteróides!';
+                'Cinturão de asteróides';
             document.getElementById('cardText').innerHTML =
                 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia recusandae sunt incidunt beatae eum delectus, voluptate esse sequi sed officia vero corporis inventore blanditiis quod animi corrupti quibusdam. Omnis, ut?';
             break;
