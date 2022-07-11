@@ -184,12 +184,17 @@ body::-webkit-scrollbar-thumb:hover {
 {
     position: absolute;
     border: 0;
-    background-color: rgba(255, 255, 255, 0.822);
-    width: 80%;
+    background-image: linear-gradient(
+        to right,
+        rgba(255, 255, 255, 0   ),
+        rgba(255, 255, 255, 1),
+        rgba(255, 255, 255, 0)
+    );
+    width: 95%;
     top: 0;
     left: 50%;
     transform: translate( -50%, 0);
-    height: 1px;
+    height: 2px;
     margin: 0;
 }
 
