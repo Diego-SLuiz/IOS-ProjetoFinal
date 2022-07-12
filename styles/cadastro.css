@@ -1,0 +1,74 @@
+body {
+    background-image: url(../assets/images/formulario-planos.jpg);
+    overflow-x: hidden;
+    outline: none;
+    color: aliceblue !important;
+}
+
+#form {
+    margin: 2rem auto;
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    min-width: 40vw;
+}
+
+.tamanhoLimite {
+    max-width: 100%;
+}
+
+.align {
+    display: flex;
+}
+
+.textoForm {
+    flex: 1 0 31.2%;
+}
+
+#nomeCompleto {
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+#nome, #sobreNome {
+    flex: 1 0 33%;
+}
+
+#usuario, #e-mail, #senha, #data {
+    flex: 1 0 40%;
+}
+
+#enviar {
+    border: 1px solid black;
+    backdrop-filter: blur(4px);
+}
+
+@media ( max-width: 600px ) {
+    
+    #nomeCompleto {
+        flex-direction: column;
+    }
+    
+    #form {
+        width: 90vw;
+    }
+    
+    .align {
+        flex-direction: column;
+    }
+    
+    #nome, #sobreNome, #usuario, #e-mail, #senha, #data {
+        width: 100%;
+        border-radius: 0;
+        transform: translateX(1px);
+    }
+    
+    #sobreNome, #usuario, #e-mail, #senha, #data {
+        border-radius: 0 0 10px 10px !important;
+    }
+    
+    .textoForm {
+        border-radius: 10px 10px 0 0 !important;
+        width: 100% !important;
+    }
+}

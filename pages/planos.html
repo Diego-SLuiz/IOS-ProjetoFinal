@@ -3,7 +3,7 @@
     <head>
         <title>Bellatrix - Destinos</title>
         <meta charset="UTF-8">
-        <link rel="icon" href="../assets/images/icone.png" type="image/x-icon">
+        <link rel="icon" href="../assets/images/favicon-32x32.png" type="image/x-icon">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
@@ -31,7 +31,7 @@
     <body>
         <div>
             <div>
-                <div id="animationContainer">
+                <!-- <div id="animationContainer">
                     <div id="sunContainer">
                         <div class="astro planet" id="sun"></div>
                     </div>
@@ -62,121 +62,37 @@
                     <div id="neptuneContainer">
                         <div class="astro planet" id="neptune"></div>
                     </div>
-                </div>
+                </div> -->
                 
-                <!-- <div class="cardsContainer">
+                <div class="cardsContainer">
                     <div class="cardClass">
                         <h5 class="cardTitle">Terra</h5>
-                        <img src="../assets/images/planetas/Terra.png">
+                        <div class="astro" id="terra"></div>
                         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tenetur assumenda rem itaque alias quas adipisci, eveniet saepe, natus ut fugit doloribus doloremque quisquam sed aliquam recusandae quibusdam, minus distinctio? Excepturi.</p>
                         <div class="cardButtons">
-                            <button class="btn btn-primary">Saiba Mais</button>
-                            <button class="btn btn-outline-light" onclick="openForm()">Viagem</button>
+                            <a class="btn btn-primary">Saiba Mais</a>
+                            <a class="btn btn-outline-light" href="./cadastro.html">Viagem</a>
                         </div>
                     </div>
+                    
                     <div class="cardClass">
                         <h5 class="cardTitle">Marte</h5>
-                        <img src="../assets/images/planetas/Marte.png">
+                        <div class="astro" id="marte"></div>
                         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tenetur assumenda rem itaque alias quas adipisci, eveniet saepe, natus ut fugit doloribus doloremque quisquam sed aliquam recusandae quibusdam, minus distinctio? Excepturi.</p>
                         <div class="cardButtons">
-                            <button class="btn btn-primary">Saiba Mais</button>
-                            <button class="btn btn-outline-light" onclick="openForm()">Viagem</button>
+                            <a class="btn btn-primary">Saiba Mais</a>
+                            <a class="btn btn-outline-light" href="./cadastro.html">Viagem</a>
                         </div>
                     </div>
+                    
                     <div class="cardClass">
-                        <h5 class="cardTitle">"Lua"</h5>
-                        <img src="../assets/images/planetas/Mercurio.png">
+                        <h5 class="cardTitle">Lua</h5>
+                        <div class="astro" id="lua"></div>
                         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tenetur assumenda rem itaque alias quas adipisci, eveniet saepe, natus ut fugit doloribus doloremque quisquam sed aliquam recusandae quibusdam, minus distinctio? Excepturi.</p>
                         <div class="cardButtons">
-                            <button class="btn btn-primary">Saiba Mais</button>
-                            <button class="btn btn-outline-light" onclick="openForm()">Viagem</button>
+                            <a class="btn btn-primary">Saiba Mais</a>
+                            <a class="btn btn-outline-light" href="./cadastro.html">Viagem</a>
                         </div>
-                    </div>
-                </div>
-            </div> -->
-
-            <!-- modal -->
-            <div>
-                <div class="" id="formContainer" onblur="closeForm()">
-                    <div id="conteudo">
-                        <i class="bi bi-x-lg" onclick="closeForm()" id="closeForm"></i>
-                        <form id="form">
-                            <p>Crie sua conta</p>
-                            <div class="input-group" id="nomeCompleto">
-                                <span class="input-group-text textoForm">Nome e Sobrenome</span>
-                                <input
-                                    class="form-control"
-                                    id="nome"
-                                    type="text"
-                                    placeholder="Nome"
-                                    required>
-                                </input>
-                                <input
-                                    class="form-control"
-                                    id="sobreNome"
-                                    type="text"
-                                    placeholder="Sobre nome"
-                                    required>
-                                </input>
-                            </div>
-                            <div class="align input-group mt-1">
-                                <span class="input-group-text form-control textoForm">Nome de usuário</span>
-                                <input
-                                    class="form-control tamanhoLimite"
-                                    id="usuario"
-                                    type="text"
-                                    placeholder="De 3 a 20 caractéres"
-                                    required>
-                                </input>
-                            </div>
-                            <div class="align input-group mt-1">
-                                <span class="input-group-text form-control textoForm">@ E-mail</span>
-                                <input
-                                    class="form-control tamanhoLimite"
-                                    id="e-mail"
-                                    type="text"
-                                    placeholder="placeholder@test.jl"
-                                    required>
-                                </input>
-                            </div>
-                            <div class="align input-group mt-1">
-                                <span class="input-group-text form-control textoForm">Senha</span>
-                                <input
-                                    class="form-control tamanhoLimite"
-                                    id="senha"
-                                    type="password"
-                                    placeholder="De 6 a 16 caractéres"
-                                    required>
-                                </input>
-                            </div>
-                            <div class="align input-group mt-1">
-                                <span class="input-group-text form-control textoForm">Data de nascimento</span>
-                                <input
-                                    class="form-control tamanhoLimite"
-                                    id="data"
-                                    type="date"
-                                    required>
-                                </input>
-                            </div>
-                            <div class="checkBox form-check mt-1">
-                                <input class="form-check-input" id="termos" type="checkbox" value="">
-                                <label class="form-check-label" for="flexCheckDefault">
-                                  Aceito todos os termos de serviço
-                                </label>
-                            </div>
-                            <div class="checkBox form-check mt-1">
-                                <input class="form-check-input" id="novidades" type="checkbox" value="">
-                                <label class="form-check-label" for="flexCheckDefault">
-                                  Desejo receber novidades
-                                </label>
-                            </div>
-                            <button
-                                class="tamanhoLimite mt-2 btn btn-outline-light"
-                                id="enviar"
-                                onclick="formDone">
-                                Enviar
-                            </button>
-                        </form>
                     </div>
                 </div>
             </div>
