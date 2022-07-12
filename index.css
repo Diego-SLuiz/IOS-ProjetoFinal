@@ -30,7 +30,21 @@ body
     flex-direction: column;
 }
 
-/* Estilo de card básico da página */
+/* Animação do astro girando */
+
+.astro
+{
+    margin: auto;
+    border-radius: 50%;
+    box-shadow: -20px -20px 50px 6px black inset, 0px 0px 20px 6px inset rgba( 0, 0, 0, 0.5 );
+    background-size: cover;
+    animation: girar 60s linear alternate infinite;
+}
+
+@keyframes girar
+{
+    100% { background-position: 100%; }
+}
 
 /* barra de rolamento do modal */
 body::-webkit-scrollbar {
