@@ -1,5 +1,5 @@
 body {
-    background-image: url(../assets/images/fundo-inicio.jpg);
+    background-image: url(../assets/images/fundo-inicio.JPEG);
 }
 
 .sobre
@@ -15,6 +15,7 @@ body {
     text-align: center;
     font-family: 'Jost', sans-serif;
     font-size: 1.1rem;
+    
 }
 
 .circulo {
@@ -26,7 +27,6 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    /* margin-right: 5%; */
     animation: treme 3.5s;
     animation-iteration-count: infinite;
 }
@@ -57,7 +57,6 @@ body {
 }
 
 #destaque {
-    /* color: rgb(37, 192, 253); */
     align-items: center;
     font-family: "Von-Everec", sans-serif!important;
     font-size: 5rem!important;
@@ -74,81 +73,7 @@ body {
     border-left: 1px solid rgba(255, 255, 255, 0.164);
     font-family: 'Jost', sans-serif;
     font-size: 1.5rem;
-    /* backdrop-filter: blur(1px);  */
 }
-
-/* .linha {
-    margin: auto 0;
-    background-color: black;
-    margin-bottom: 10%;
-    width: 70%;
-    margin-left: 14%; 
-} */
-
-/* .container {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    max-width: 1200px;
-    flex-wrap: wrap;
-    z-index: 1;
-    letter-spacing: 1.5px;
-}
-
-.container .card {
-    position: relative;
-    width: 280px;
-    height: 400px;
-    margin: 30px;
-    box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
-    border-radius: 15px;
-    background: rgba(255, 255, 255, 0.1);
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-top: 1px solid rgba(255, 253, 253, 0.5);
-    border-left: 1px solid rgba(255, 255, 255, 0.5);
-    backdrop-filter: blur(2px);
-    border-radius: 50%;
-    width: 220px;
-    height: 220px;
-}
-
-.container .card:hover .content{
-    transform: translate(0px);
-    opacity: 1;
-}
-
-.container .card .content a{
-    font-weight: 600;
-    color: black;
-    text-align: center;
-    text-decoration: none;
-    font-family: "Von-Everec", sans-serif!important;
-    font-size: 2.7rem!important;
-    padding: 0!important;
-} */
-
-
-
-/* #texto-principal {
-    position: relative;
-    width: 80%;
-    height: 400px;
-    margin: 30px;
-    box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
-    border-radius: 15px;
-    background: rgba(255, 255, 255, 0.1);
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-top: 1px solid rgba(255, 253, 253, 0.5);
-    border-left: 1px solid rgba(255, 255, 255, 0.5);
-    backdrop-filter: blur(2px);
-} */
 
 .btn1 {
     display: flex;
@@ -199,9 +124,52 @@ body {
     font-size: 1.3rem;
 }
 
+@media ( min-width: 1400px )
+{
+    .sobre {
+        width: 100%;
+        justify-content: space-around;
+    }
 
+    .circulo {
+        animation: none;
+    }
+}
 
+@media ( max-width: 900px )
+{
+    .sobre {
+        flex-direction: column;
+        top: 0;
+        position: relative;
+        transform: translateY(0);
+        gap: 3rem;
+        margin-bottom: 2rem;
 
+    }
+
+    .circulo {
+        animation: none;
+    }
+
+    #texto-principal {
+        max-width: 100%;
+        width: 100%;
+    }
+
+    #texto-principal p {
+        display: block!important;
+        margin: 0!important;
+        width: 100%!important;
+    }
+}
+
+@media ( max-width: 600px )
+{
+    .sobre {
+        padding: 0;
+    }
+}
 
 
 

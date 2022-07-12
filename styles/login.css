@@ -2,6 +2,7 @@
 body {
     margin: 0;
     font-family: 'Noto Sans', sans-serif;
+    background-image: url('../assets/images/fundo-login_formulario.jpg');
 }
 
 body * {
@@ -9,38 +10,26 @@ body * {
 }
 
 .main-login {
-    width: 100vw;
-    height: 100vh;
-    background: #201b2c;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 2rem 0;
     font-family: 'Jost', sans-serif;
     font-size: 1.1rem;
+    max-width: 1400px;
+    margin: 0 auto;
 }
 
 .left-login {
-    width: 50vw;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+    text-align: center;
 }
 
 .left-login h1 {
     color: rgba(255, 255, 255, 0.932);
-    font-size: 3vw;
-}
-
-.left-login-image{
-    width: 33.5vw;
-    margin-bottom: 8%;
+    font-size: 3rem;
 }
 
 .right-login{
-    width: 50vw;
-    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -58,11 +47,10 @@ body * {
     box-shadow: 0px 10px 40px #00000056;
     border-top: 1px solid rgba(255, 253, 253, 0.5);
     border-left: 1px solid rgba(255, 255, 255, 0.5);
-    margin-top: 15%;
 }
 
 .card-login h1 {
-    color: rgb(37, 192, 253);
+    color: rgb(20, 180, 243);
     font-weight: 800;
     margin: 0;
     font-family: "Von-Everec", sans-serif!important;
@@ -111,11 +99,27 @@ body * {
     text-transform: uppercase;
     font-weight: 800;
     letter-spacing: 3px;
-    color: #2b134b;
-    background: #00ff88;
+    color: #2b134bf5;
+    background-color: #5568fe;
     cursor: pointer;
-    box-shadow: 0px 10px 40px -12px #00ff8052;
+    box-shadow: 0px 10px 40px -12px #1db3ee9c;
 }
+
+.conta-mensagem {
+    display: flex;
+    color: aliceblue!important;
+}
+
+.conta-mensagem a {
+    text-decoration: none;
+}
+
+a{
+    color: #5568fe;
+    text-decoration: none;
+    margin-left: 10px;
+}
+
 
 @media only screen and (max-width: 950px) {
     .card-login {
@@ -126,7 +130,21 @@ body * {
 @media only screen and (max-width: 600px) {
     .main-login {
         flex-direction: column;
+        justify-content: flex-start;
+        margin: 0;
+        padding-top: 0;
     }
+
+    .conta-mensagem
+    {
+        flex-direction: column;
+    }
+
+    .conta-mensagem a {
+        margin: 0;
+    }
+
+
     .left-login h1{
         display: none;
     }
