@@ -37,14 +37,15 @@ main{
   transition:.5s; 
   border-top: 1px solid rgb(255, 253 ,253, 0.5);
   border-left: 1px solid rgb(255, 253 ,253, 0.5);
+  margin-bottom: 5em;
   
-  
+}
+.sobre h1,p{
+  backdrop-filter: blur(0px);
 }
 #jornada{
 
-  width:100%;
-
- 
+  width:100%; 
   padding: 1rem;
 
 }
