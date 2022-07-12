@@ -1,0 +1,10 @@
+Missão
+Nosso objetivo é apresentar e conectar cada vez mais pessoas ao espaço, de forma que desperte o interesse de cada um.
+Temos o compromisso de garantir a qualidade e conforto de nossos clientes, proporcionando uma viagem tranquila e inovadora.
+
+Valores
+Estamos sempre focando em nos manter transparentes em relação aos nossos clientes, mantendo nossa ética e intergidade.
+Buscamos ao máximo o comprometimento, através da confiabilidade pelo serviço prestado.
+
+'Navegar pelo site'
+https://diego-sluiz.github.io/IOS-ProjetoFinal/pages/inicio.html
