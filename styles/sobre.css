@@ -77,3 +77,77 @@ main{
 
 }
 
+#team .card .img-wrapper
+{
+    position: relative;
+}
+
+#team .card .overlay
+{
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #329df5a1;
+    transition: all 1s ease;
+}
+
+#team .card:hover .overlay
+{
+    opacity: 0.75;
+}
+
+#team .card .social-links
+{
+    gap: 1rem;
+}
+
+#team .card .social-links a
+{
+    width: 48px;
+    height: 48px;
+    background-color: rgba(255, 255, 255, 0.4);
+}
+
+.social-links a
+{
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.288);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.social-links a:hover
+{
+    transition: all 0.25s ease;
+    transform: scale(1.2);
+}
+
+
+.content-banner h2{
+  padding: 2px;
+  font-family: Von-Everec;
+  color: rgb(249, 250, 250);
+  font-size: 60px;
+  transition: all 0.5s;
+  cursor: pointer;
+
+}
+
+#team {
+  padding: 100px;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: nowrap;
+  gap: 20px;
+  
+}
+
+/* .card {
+  padding: 100px;
+} */
