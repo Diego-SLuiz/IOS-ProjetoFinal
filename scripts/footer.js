@@ -26,7 +26,7 @@ let footerContent = `
             <i target="_blank" class="footer-icone bi bi-twitter fs-5"></i>
         </a>
 
-        <a href="https://www.twitter.com/" target="_blank" class="footer-item">
+        <a href="https://www.gmail.com/" target="_blank" class="footer-item">
             <i target="_blank" class="footer-icone bi bi-google fs-5"></i>
         </a>
     </div>

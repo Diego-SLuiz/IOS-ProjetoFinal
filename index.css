@@ -192,7 +192,7 @@ body::-webkit-scrollbar-thumb:hover {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    padding: 10px;
+    padding: 1rem;
 }
 
 #footer-linha
@@ -281,6 +281,4 @@ body::-webkit-scrollbar-thumb:hover {
         gap: 1rem;
         text-align: center;
     }
-
-
 }
