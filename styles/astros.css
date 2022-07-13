@@ -55,8 +55,9 @@ main
 .carousel-caption
 {
     font-family: "Von-Everec", sans-serif!important;
-    font-size: 2rem!important;
+    font-size: 3rem!important;
     padding: 0!important;
+    bottom: 0!important;
 }
 
 #astro-slider
@@ -74,9 +75,11 @@ main
     padding-top: 0;
     backdrop-filter: blur(1px);
     font-family: 'Jost', sans-serif;
-    font-size: 1.1rem;
+    font-size: 1.3rem;
+    text-align: center;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
 }
 
 #astro-nome
@@ -84,7 +87,7 @@ main
     font-family: 'Jost', sans-serif;
     text-align: center;
     font-family: Von-Everec;
-    font-size: 3rem;
+    font-size: 4rem;
 }
 
 .astro-atributo
@@ -97,15 +100,16 @@ main
 {
     display: flex;
     justify-content: space-evenly;
-    margin-top: auto;
+    /* margin-top: auto; */
 }
 
 .atributo-item
 {
     border-top: 2px solid rgba(255, 255, 255, 0.301);
+    font-size: 1.5rem;
 }
 
-@media ( max-width: 850px )
+@media ( max-width: 982px )
 {
     main
     {
@@ -124,12 +128,18 @@ main
     }
 }
 
-@media ( max-width: 475px )
+@media ( max-width: 525px )
 {
     main
     {
         padding: 0;
     }
+
+    .carousel-caption
+    {
+        font-size: 2rem!important;
+    }
+
 
     #astro-informacoes
     {
