@@ -9,24 +9,25 @@ let footerContent = `
 
     <div class="copyright-container">
         <div id="footer-copyright">
-            <p>&copy; Bellatrix - Todos os direitos reservados - 2022</p>
+            <p class="fs-5">&copy; Bellatrix - Todos os direitos reservados - 2022</p>
         </div>
     </div>
 
     <div class="item-container">
         <a href="https://www.instagram.com/" target="_blank" class="footer-item">
-            <i target="_blank" class="footer-icone bi bi-instagram"></i>
-            <hr>
+            <i target="_blank" class="footer-icone bi bi-instagram fs-5"></i>
         </a>
 
         <a href="https://www.facebook.com/" target="_blank" class="footer-item">
-            <i target="_blank" class="footer-icone bi bi-facebook"></i>
-            <hr>
+            <i target="_blank" class="footer-icone bi bi-facebook fs-5"></i>
         </a>
 
         <a href="https://www.twitter.com/" target="_blank" class="footer-item">
-            <i target="_blank" class="footer-icone bi bi-twitter"></i>
-            <hr>
+            <i target="_blank" class="footer-icone bi bi-twitter fs-5"></i>
+        </a>
+
+        <a href="https://www.gmail.com/" target="_blank" class="footer-item">
+            <i target="_blank" class="footer-icone bi bi-google fs-5"></i>
         </a>
     </div>
 `;
