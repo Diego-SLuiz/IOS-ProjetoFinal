@@ -74,104 +74,12 @@ body {
     margin: 0 auto !important;
 }
 
-/* planetas */
-#animationContainer {
-    position: relative;
-    width: 95vw !important;
-    height: 95vh !important;
-    border: 1px solid white;
-    margin: 0 auto;
-    background-color: black;
-    background-image: url(../assets/images/fundo-animacao.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    overflow: hidden;
-}
-
-.planet {
-    position: absolute;
-    border-radius: 50%;
-    cursor: pointer;
-}
-
-#sun {
-    background-color: orange;
-    width: 50px;
-    height: 50px;
-}
-
-#mercury {
-    background-color: gray;
-    width: 5px;
-    height: 5px;
-}
-
-#venus {
-    background-color: chocolate;
-    width: 10px;
-    height: 10px;
-}
-
-#earth {
-    background-color: royalblue;
-    width: 12px;
-    height: 12px;
-}
-
-#moon {
-    background-color: gainsboro;
-    width: 6px;
-    height: 6px;
-}
-
-#mars {
-    background-color: brown;
-    width: 11px;
-    height: 11px;
-}
-/* 
-#asteroid {
-    
-} */
-
-#jupiter {
-    background-color: rosybrown;
-    width: 35px;
-    height: 35px;
-}
-
-#saturn {
-    background-color: tan;
-    width: 25px;
-    height: 25px;
-}
-
-#uranus {
-    background-color: aqua;
-    width: 20px;
-    height: 20px;
-}
-
-#neptune {
-    background-color: blue;
-    width: 25px;
-    height: 25px;
-}
-/* fim planetas */
-
 /* cards */
 .cardsContainer {
     display: flex;
     justify-content: space-around;
     margin: 1rem;
     flex-wrap: wrap;
-}
-
-/* 995 - 663 */
-
-.zIndex {
-    z-index: -1 !important;
 }
 
 .cardClass {
@@ -188,7 +96,6 @@ body {
     border-left: 1px solid rgba(255, 255, 255, 0.3);
     border-top: 1px solid rgba(255, 255, 255, 0.3);
     box-shadow: 5px 5px 20px 3px black;
-    cursor: default;
 }
 
 .cardClass p {
