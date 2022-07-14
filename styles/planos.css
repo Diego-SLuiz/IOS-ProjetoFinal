@@ -176,6 +176,10 @@ body {
 
 /* 995 - 663 */
 
+.zIndex {
+    z-index: -1 !important;
+}
+
 .cardClass {
     max-width: 300px;
     min-width: 300px;
