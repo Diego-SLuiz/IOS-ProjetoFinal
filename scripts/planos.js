@@ -1,76 +1,98 @@
 // astros
+const container = document.getElementById('animationContainer');
 const sun = document.querySelector('#sun');
+const stopAll = 0;
+const stopAllRand = 0;
 const mercury = {
-    speed: 0.0,
-    theta: Math.random() * Math.PI * 2 * 0,
+    speed: 0.0005 * stopAll,
+    theta: Math.random() * Math.PI * 2 * stopAllRand,
     radius: 50,
     el: document.querySelector('#mercury'),
 };
 
 const venus = {
-    speed: 0.0,
-    theta: Math.random() * Math.PI * 2 * 0,
+    speed: 0.0005 * stopAll,
+    theta: Math.random() * Math.PI * 2 * stopAllRand,
     radius: 70,
     el: document.querySelector('#venus'),
 };
 
 const earth = {
-    speed: 0.0,
-    theta: Math.random() * Math.PI * 2 * 0,
+    speed: 0.0005 * stopAll,
+    theta: Math.random() * Math.PI * 2 * stopAllRand,
     radius: 90,
     el: document.querySelector('#earth'),
 };
 
+const moon = {
+    speed: 0.0005 * stopAll,
+    theta: earth.theta * stopAll - 0.1,
+    radius: 90,
+    el: document.querySelector('#moon'),
+};
+
 const mars = {
-    speed: 0.0,
-    theta: Math.random() * Math.PI * 2 * 0,
+    speed: 0.0005 * stopAll,
+    theta: Math.random() * Math.PI * 2 * stopAllRand,
     radius: 110,
     el: document.querySelector('#mars'),
 };
 
 const jupiter = {
-    speed: 0.0,
-    theta: Math.random() * Math.PI * 2 * 0,
+    speed: 0.0005 * stopAll,
+    theta: Math.random() * Math.PI * 2 * stopAllRand,
     radius: 130,
     el: document.querySelector('#jupiter'),
 };
 
 const saturn = {
-    speed: 0.0,
-    theta: Math.random() * Math.PI * 2 * 0,
+    speed: 0.0005 * stopAll,
+    theta: Math.random() * Math.PI * 2 * stopAllRand,
     radius: 180,
     el: document.querySelector('#saturn'),
 };
 
 const uranus = {
-    speed: 0.0,
-    theta: Math.random() * Math.PI * 2 * 0,
+    speed: 0.0005 * stopAll,
+    theta: Math.random() * Math.PI * 2 * stopAllRand,
     radius: 220,
     el: document.querySelector('#uranus'),
 };
 
 const neptune = {
-    speed: 0.0,
-    theta: Math.random() * Math.PI * 2 * 0,
-    radius: 250,
+    speed: 0.0005 * stopAll,
+    theta: Math.random() * Math.PI * 2 * stopAllRand,
+    radius: container.clientWidth / 2 - 30,
     el: document.querySelector('#neptune'),
 };
 
-const planets = [mercury, venus, earth, mars, jupiter, saturn, uranus, neptune];
+const planets = [
+    mercury,
+    venus,
+    earth,
+    moon,
+    mars,
+    jupiter,
+    saturn,
+    uranus,
+    neptune,
+];
 
 // posiciona o sol no centro da tela
-var sunX = window.innerWidth / 2 - sun.clientWidth / 2;
-var sunY = window.innerHeight / 2 - sun.clientHeight / 2;
+var sunX = container.clientWidth / 2 - sun.clientWidth / 2;
+var sunY = container.clientHeight / 2 - sun.clientHeight / 2;
 sun.style.left = `${sunX}px `;
 sun.style.top = `${sunY}px `;
 
 // reposiciona o sol no centro caso o tamahno da tela mude
 window.addEventListener('resize', redimensionar);
 function redimensionar() {
-    sunX = window.innerWidth / 2 - sun.clientWidth / 2;
-    sunY = window.innerHeight / 2 - sun.clientHeight / 2;
+    sunX = container.clientWidth / 2 - sun.clientWidth / 2;
+    sunY = container.clientHeight / 2 - sun.clientHeight / 2;
     sun.style.left = `${sunX}px `;
     sun.style.top = `${sunY}px `;
+
+    neptune.radius = container.clientWidth / 2 - 30;
 }
 
 // atualiza a posição dos planetas em volta do sol
@@ -93,18 +115,19 @@ render();
 // fim astros
 
 // cards
-const astros = document.getElementsByClassName('astro');
+const astros = document.getElementsByClassName('astroAnim');
 const todosAstos = [
-    'Sol',
-    'Mercurio',
-    'Venus',
-    'Terra',
-    'Marte',
-    'Asteroid',
-    'Jupiter',
-    'Saturno',
-    'Urano',
-    'Netuno',
+    'sol',
+    'mercurio',
+    'venus',
+    'terra',
+    'lua',
+    'marte',
+    'asteroid',
+    'jupiter',
+    'saturno',
+    'urano',
+    'netuno',
 ];
 var floatingCard;
 
@@ -113,90 +136,97 @@ for (let i = 0; i < astros.length; i++) {
 }
 function card(e) {
     let planetID = `${e.target.id}Container`;
+    let planetText;
+    let planetTitle;
+    let planetTravel;
 
     if (document.querySelector(`#${planetID}`) != null) {
         resetCard();
     }
 
-    function imgAstro(img) {
+    function imgAstro(index) {
         floatingCard = `
-            <div class="card interactiveCardContainer">
-            <i class="bi bi-x-lg" onclick="resetCard()" id="closeForm"></i>
-                <img src="../assets/images/planetas/${todosAstos[img]}.png" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title" id="planetName"></h5>
-                    <p class="card-text"  id="cardText"></p>
-                </div>
-                <div class="card-body">
-                    <button type="button" class="btn btn-primary btn-sm">Saiba mais</button>
-                    <button type="button" class="btn btn-secondary btn-sm" disabled>Viagem Impossivel</button>
-                </div>
+        <div class="cardClass">
+        <i class="bi bi-x-lg" id="closeCard" onclick="resetCard()"></i>
+            <h5 class="cardTitle" id="planetName"></h5>
+            <div class="astro" id="${todosAstos[index]}Card"></div>
+            <p id="cardText"></p>
+            <div class="cardButtons">
+                <a class="btn btn-primary" href="../pages/astros.html">Saiba Mais</a>
+                <button class="btn btn-outline-light" id="travel" href="./login.html">Viagem</button>
             </div>
+        </div>
         `;
         e.target.innerHTML = floatingCard;
+        planetText = document.getElementById('cardText');
+        planetTitle = document.getElementById('planetName');
+        planetTravel = document.getElementById('travel');
+    }
+
+    function disableTravel() {
+        planetTravel.className += ' disabled';
     }
 
     switch (e.target.id) {
         case 'sun':
             imgAstro(0);
-            document.getElementById('planetName').innerHTML = 'Sol';
-            document.getElementById('cardText').innerHTML =
-                'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia recusandae sunt incidunt beatae eum delectus, voluptate esse sequi sed officia vero corporis inventore blanditiis quod animi corrupti quibusdam. Omnis, ut?';
+            planetTitle.innerText = 'Sol';
+            planetText.innerText = 'esse é o sol';
+            disableTravel();
             break;
         case 'mercury':
             imgAstro(1);
-            document.getElementById('planetName').innerHTML = 'Mercúrio';
-            document.getElementById('cardText').innerHTML =
-                'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia recusandae sunt incidunt beatae eum delectus, voluptate esse sequi sed officia vero corporis inventore blanditiis quod animi corrupti quibusdam. Omnis, ut?';
+            planetTitle.innerText = 'Mercúrio';
+            planetText.innerText = 'esse é mercúrio';
             break;
         case 'venus':
             imgAstro(2);
-            document.getElementById('planetName').innerHTML = 'Venus';
-            document.getElementById('cardText').innerHTML =
-                'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia recusandae sunt incidunt beatae eum delectus, voluptate esse sequi sed officia vero corporis inventore blanditiis quod animi corrupti quibusdam. Omnis, ut?';
+            planetTitle.innerText = 'Venus';
+            planetText.innerText = 'essa é venus';
             break;
         case 'earth':
             imgAstro(3);
-            document.getElementById('planetName').innerHTML = 'Terra';
-            document.getElementById('cardText').innerHTML =
-                'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia recusandae sunt incidunt beatae eum delectus, voluptate esse sequi sed officia vero corporis inventore blanditiis quod animi corrupti quibusdam. Omnis, ut?';
+            planetTitle.innerText = 'Terra';
+            planetText.innerText = 'essa é a terra';
+            break;
+        case 'moon':
+            imgAstro(4);
+            planetTitle.innerText = 'Lua';
+            planetText.innerText = 'essa é a lua';
             break;
         case 'mars':
-            imgAstro(4);
-            document.getElementById('planetName').innerHTML = 'Marte';
-            document.getElementById('cardText').innerHTML =
-                'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia recusandae sunt incidunt beatae eum delectus, voluptate esse sequi sed officia vero corporis inventore blanditiis quod animi corrupti quibusdam. Omnis, ut?';
+            imgAstro(5);
+            planetTitle.innerText = 'Marte';
+            planetText.innerText = 'esse é marte';
             break;
         case 'asteroid':
-            imgAstro(5);
-            document.getElementById('planetName').innerHTML =
-                'Cinturão de asteróides';
-            document.getElementById('cardText').innerHTML =
-                'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia recusandae sunt incidunt beatae eum delectus, voluptate esse sequi sed officia vero corporis inventore blanditiis quod animi corrupti quibusdam. Omnis, ut?';
+            imgAstro(6);
+            planetTitle.innerText = 'Cinturão de asteróides';
+            planetText.innerText = 'esse é o cinturão de asteróides';
             break;
         case 'jupiter':
-            imgAstro(6);
-            document.getElementById('planetName').innerHTML = 'Jupiter';
-            document.getElementById('cardText').innerHTML =
-                'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia recusandae sunt incidunt beatae eum delectus, voluptate esse sequi sed officia vero corporis inventore blanditiis quod animi corrupti quibusdam. Omnis, ut?';
+            imgAstro(7);
+            planetTitle.innerText = 'Jupiter';
+            planetText.innerText = 'esse é jupiter';
+            disableTravel();
             break;
         case 'saturn':
-            imgAstro(7);
-            document.getElementById('planetName').innerHTML = 'Saturno';
-            document.getElementById('cardText').innerHTML =
-                'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia recusandae sunt incidunt beatae eum delectus, voluptate esse sequi sed officia vero corporis inventore blanditiis quod animi corrupti quibusdam. Omnis, ut?';
+            imgAstro(8);
+            planetTitle.innerText = 'Saturno';
+            planetText.innerText = 'esse é saturno';
+            disableTravel();
             break;
         case 'uranus':
-            imgAstro(8);
-            document.getElementById('planetName').innerHTML = 'Urano';
-            document.getElementById('cardText').innerHTML =
-                'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia recusandae sunt incidunt beatae eum delectus, voluptate esse sequi sed officia vero corporis inventore blanditiis quod animi corrupti quibusdam. Omnis, ut?';
+            imgAstro(9);
+            planetTitle.innerText = 'Urano';
+            planetText.innerText = 'esse é urano';
+            disableTravel();
             break;
         case 'neptune':
-            imgAstro(9);
-            document.getElementById('planetName').innerHTML = 'Netuno';
-            document.getElementById('cardText').innerHTML =
-                'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia recusandae sunt incidunt beatae eum delectus, voluptate esse sequi sed officia vero corporis inventore blanditiis quod animi corrupti quibusdam. Omnis, ut?';
+            imgAstro(10);
+            planetTitle.innerText = 'Netuno';
+            planetText.innerText = 'esse é netuno';
+            disableTravel();
             break;
     }
 }
@@ -204,7 +234,6 @@ function card(e) {
 function resetCard() {
     for (let i = 0; i < astros.length; i++) {
         astros[i].innerHTML = '';
-        document.getElementsByClassName('interactiveCardContainer').remove;
     }
 }
 // fim cards
