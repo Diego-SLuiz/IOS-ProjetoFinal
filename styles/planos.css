@@ -161,16 +161,10 @@ body {
 /* fim planetas */
 
 /* cards */
-#closeCard {
-    position: absolute;
-    cursor: pointer;
-    left: 12px;
-    top: 8px;
-}
-
 .cardsContainer {
     display: flex;
     justify-content: space-around;
+    margin: 1rem;
     flex-wrap: wrap;
 }
 
@@ -181,8 +175,7 @@ body {
 }
 
 .cardClass {
-    max-width: 300px;
-    min-width: 300px;
+    width: 300px;
     min-height: 100%;
     display: flex;
     flex-direction: column;
@@ -195,7 +188,6 @@ body {
     border-left: 1px solid rgba(255, 255, 255, 0.3);
     border-top: 1px solid rgba(255, 255, 255, 0.3);
     box-shadow: 5px 5px 20px 3px black;
-    margin: 1rem;
     cursor: default;
 }
 
