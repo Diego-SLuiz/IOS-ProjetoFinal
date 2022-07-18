@@ -18,7 +18,7 @@ main{
   justify-content: space-around;
   flex-wrap: wrap;
   gap: 40px;
-  
+
 }
 
 
@@ -34,11 +34,11 @@ main{
   text-align: center;
   color: white;
   backdrop-filter: blur(3px);
-  transition:.5s; 
+  transition:.5s;
   border-top: 1px solid rgb(255, 253 ,253, 0.5);
   border-left: 1px solid rgb(255, 253 ,253, 0.5);
   /* margin-bottom: 5em; */
-  
+
 }
 
 .sobre h1,p{
@@ -47,13 +47,13 @@ main{
 
 #jornada{
 
-  width:100%; 
+  width:100%;
   padding: 1rem;
 }
 
-.sobre:hover { 
-	transform: translateY(-10px);   
-	box-shadow: 0 2px 5px rgba(3, 97, 141, 0.137); 
+.sobre:hover {
+	transform: translateY(-10px);
+	box-shadow: 0 2px 5px rgba(3, 97, 141, 0.137);
 }
 
 .sobre p {
@@ -129,6 +129,9 @@ main{
 .membro-card img
 {
   width: 220px;
+  height: 220px;
+  object-position: center;
+  object-fit: cover;
   display: block;
   border-radius: 10px;
   margin: 0 auto;
@@ -155,7 +158,7 @@ main{
   gap: 1rem;
 }
 
-.membro-redes a 
+.membro-redes a
 {
   font-size: 3rem!important;
   color: white!important;
@@ -181,7 +184,7 @@ main{
   align-items: center;
 }
 
-.membro-icones a 
+.membro-icones a
 {
   display: flex;
   flex-wrap: wrap;
@@ -194,7 +197,7 @@ main{
   transition: 0.5s ease all;
 }
 
-.membro-icones i 
+.membro-icones i
 {
   color: white!important;
   font-size: 16px!important;
